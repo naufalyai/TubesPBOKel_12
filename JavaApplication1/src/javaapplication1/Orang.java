@@ -84,4 +84,6 @@ public abstract class Orang {
 	public String getKota(){
 		return kota;
         }
+        
+        public abstract void display();
 }
