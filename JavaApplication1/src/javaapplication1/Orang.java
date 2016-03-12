@@ -5,24 +5,32 @@
  */
 package javaapplication1;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author rannypa
  */
 public abstract class Orang {
     private String firstNama;
+        
 	private String lastNama;
 	private long id;
 	private String jenisKelamin;
 	private String tanggalLahir;
+        private Date tgl;
 	private String telepon;
 	private String alamat;
 	private String kota;
 	
-	public Orang(String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+	public Orang(String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat) throws ParseException{
 		this.firstNama=firstNama;
 		this.jenisKelamin=jenisKelamin;
-		this.tanggalLahir=tanggalLahir;
+		tgl=sdf.parse(tanggalLahir);
 		this.telepon=telepon;
 		this.alamat=alamat;
 	}
@@ -40,7 +48,7 @@ public abstract class Orang {
 	public void setLastNama(String lastNama){
 		this.lastNama=lastNama;
 	}
-	
+
 	public String getLastNama(){
 		return lastNama;
 	}
