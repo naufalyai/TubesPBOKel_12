@@ -5,13 +5,15 @@
  */
 package javaapplication1;
 
+import java.text.ParseException;
+
 /**
  *
  * @author Naufal Dzaky
  */
 public class Pembimbing extends Orang {
     private long nip;
-	public Pembimbing(String firstNama,String lastNama, String jenisKelamin,String tanggalLahir,String telepon,String alamat,long nip){
+	public Pembimbing(String firstNama,String lastNama, String jenisKelamin,String tanggalLahir,String telepon,String alamat,long nip) throws ParseException{
 		super(firstNama,lastNama,jenisKelamin,tanggalLahir,telepon,alamat);
 		this.nip = nip;
 	}
