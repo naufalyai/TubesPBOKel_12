@@ -7,7 +7,6 @@ package javaapplication1;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
@@ -21,6 +20,11 @@ public class Kelompok {
         this.idKelompok = idKelompok;
         anggota = new ArrayList();
     }
+
+    public Kelompok() {
+        anggota = new ArrayList();
+    }
+    
 
     public void setIdKelompok(int idKelompok) {
         this.idKelompok = idKelompok;
