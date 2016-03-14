@@ -30,6 +30,7 @@ public class Mahasiswa extends Orang{
 	}
 
 
+        @Override
 	public void display(){
 		System.out.println("Nama :"+super.getFirstNama());
 		System.out.println("Nama Akhir :"+super.getLastNama());
