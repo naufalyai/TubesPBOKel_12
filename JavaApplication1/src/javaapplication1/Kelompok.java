@@ -39,5 +39,4 @@ public class Kelompok {
     public void deleteAnggota(Mahasiswa m){
         anggota.remove(m);
     }
-   
 }
