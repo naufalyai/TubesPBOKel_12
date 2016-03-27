@@ -60,6 +60,5 @@ public class Aplikasi {
        Mahasiswa m = new Mahasiswa(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat,ipk,nim);
        daftarMahasiswa.add(m);
    }
-   public void menu2() 
    
 }
