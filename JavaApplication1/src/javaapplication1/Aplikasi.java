@@ -5,6 +5,7 @@
  */
 package javaapplication1;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 
 /**
@@ -47,6 +48,18 @@ public class Aplikasi {
         return m;
     }
     
+    public void deleteMahasiswa(long nim){
+        for (int i=0;i<daftarMahasiswa.size();i++){
+            if(nim == daftarMahasiswa.get(i).getNim()){
+                 daftarMahasiswa.remove(i);
+            }
+        }
+    }
     
-    
+   public void menu1(String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat, int ipk, long nim) throws ParseException{
+       Mahasiswa m = new Mahasiswa(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat,ipk,nim);
+       daftarMahasiswa.add(m);
+   }
+   public void menu2() 
+   
 }
