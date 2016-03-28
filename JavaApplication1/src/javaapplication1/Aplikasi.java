@@ -61,5 +61,4 @@ public class Aplikasi {
        daftarMahasiswa.add(m);
    }
    
-   public void menu2()
 }
