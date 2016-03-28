@@ -14,12 +14,20 @@ import java.util.ArrayList;
 public class Lokasi {
     private Pembimbing pembimbing;
     private ArrayList<Kelompok> kelompok;
+    private String lokasi;
     public int nomorKelompok;
 
     public Lokasi(int nomorKelompok) {
         this.nomorKelompok = nomorKelompok;
         kelompok= new ArrayList();
     }
+
+    public Lokasi(int nomorKelompok, String lokasi) {
+        this.nomorKelompok = nomorKelompok;
+        this.lokasi = lokasi;
+        kelompok= new ArrayList();
+    }
+    
 
     public void setPembimbing(Pembimbing p) {
         pembimbing=p;
