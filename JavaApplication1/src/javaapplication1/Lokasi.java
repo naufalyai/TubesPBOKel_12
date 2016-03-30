@@ -15,21 +15,21 @@ public class Lokasi {
     private Pembimbing pembimbing;
     private ArrayList<Kelompok> kelompok;
     private String lokasi;
-    public int nomorKelompok;
+    public int nomorLokasi;
 
-    public Lokasi(int nomorKelompok) {
-        this.nomorKelompok = nomorKelompok;
+    public Lokasi(int nomorLokasi) {
+        this.nomorLokasi = nomorLokasi;
         kelompok= new ArrayList();
     }
 
-    public Lokasi(int nomorKelompok, String lokasi) {
-        this.nomorKelompok = nomorKelompok;
+    public Lokasi(int nomorLokasi, String lokasi) {
+        this.nomorLokasi = nomorLokasi;
         this.lokasi = lokasi;
         kelompok= new ArrayList();
     }
     
-    public Lokasi(int nomorKelompok, String lokasi,Pembimbing p) {
-        this.nomorKelompok = nomorKelompok;
+    public Lokasi(int nomorLokasi, String lokasi,Pembimbing p) {
+        this.nomorLokasi = nomorLokasi;
         this.lokasi = lokasi;
         kelompok= new ArrayList();
         this.pembimbing = pembimbing;

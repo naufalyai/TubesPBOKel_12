@@ -5,6 +5,8 @@
  */
 package javaapplication1;
 
+import java.text.ParseException;
+
 /**
  *
  * @author Naufal Dzaky
@@ -14,8 +16,10 @@ public class JavaApplication1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
+        Aplikasi app = new Aplikasi();
+        app.mainmenu();
     }
     
 }
