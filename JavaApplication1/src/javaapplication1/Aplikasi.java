@@ -154,19 +154,15 @@ public class Aplikasi {
                    int nim,ipk;
                    System.out.println("Daftar Geladi");
                    System.out.print("Masukkan Nama Depan: ");
-                   namaDepan = pilih.nextLine();
-                   namaDepan = pilih.nextLine();
+                   namaDepan = pilih.next();
                    System.out.print("Masukkan Nama Belakang: ");
-                   namaBelakang = pilih.nextLine();
-                   namaBelakang = pilih.nextLine();
+                   namaBelakang = pilih.next();
                    System.out.print("Masukkan Jenis Kelamin: ");
-                   jenisK = pilih.nextLine();
-                   jenisK = pilih.nextLine();
+                   jenisK = pilih.next();
                    System.out.print("Masukkan Tanggal Lahir: ");
-                   tanggalLahir = pilih.nextLine();
+                   tanggalLahir = pilih.next();
                    System.out.print("Masukkan Telepon: ");
-                   telp = pilih.nextLine();
-                   telp = pilih.nextLine();
+                   telp = pilih.next();
                    System.out.print("Masukkan Alamat: ");
                    alamat = pilih.nextLine();
                    alamat = pilih.nextLine();
@@ -253,26 +249,21 @@ public class Aplikasi {
                 case 8:
                     System.out.print("Masukkan Nama Depan: ");
                    String nDepan = pilih.nextLine();
-                   nDepan = pilih.nextLine();
                    System.out.print("Masukkan Nama Belakang: ");
                    String nBelakang = pilih.nextLine();
-                   nBelakang = pilih.nextLine();
                    System.out.print("Masukkan Jenis Kelamin: ");
                    String jK = pilih.nextLine();
-                   jK = pilih.nextLine();
                    System.out.print("Masukkan Tanggal Lahir: ");
                    String tLahir = pilih.nextLine();
-                   tLahir = pilih.nextLine();
                    System.out.print("Masukkan Telepon: ");
                    String tlp = pilih.nextLine();
-                   tlp = pilih.nextLine();
                    System.out.print("Masukkan Alamat: ");
                    String almt = pilih.nextLine();
-                   almt = pilih.nextLine();
                    System.out.print("Masukkan NIP: ");
                    int nip = pilih.nextInt();
                    menu8(nDepan,nBelakang,jK,tLahir,tlp,almt,nip);
-                 
+                case 9:
+                    
                    
                    
                     
