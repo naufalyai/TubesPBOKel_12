@@ -18,6 +18,7 @@ public class Aplikasi {
     private ArrayList<Pembimbing> daftarPembimbing;
     private ArrayList<Mahasiswa> daftarMahasiswa;
     private ArrayList<Lokasi> daftarLokasi;
+    
     public void buatDaftar(){
         daftarPembimbing = new ArrayList<>();
         daftarMahasiswa = new ArrayList<>();
@@ -107,6 +108,7 @@ public class Aplikasi {
    public void menu6(Lokasi l,int idK){
        l.createKelompok(idK);
    }
+   //hapus kelompok
    public void menu7(Lokasi l, int idK){
     int no;
     for (int i = 0;i<l.getKelompok().size();i++){
@@ -220,13 +222,58 @@ public class Aplikasi {
                    System.out.print("Lokasi telah dihapus");
                    break;
                 case 6:
-                   
-                   for(int i = 0;i<daftarLokasi.get(ll).getKelompok().size();i++){
+              
+                   for(int i=0;i<daftarLokasi.size();i++){
+                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                   }
+                   System.out.print("Pilih Lokasi : ");
+                   int no = pilih.nextInt();
+                   for(int i = 0;i<daftarLokasi.get(no).getKelompok().size();i++){
                        System.out.println(i+". "+daftarLokasi.get(ll).getKelompok().get(i).getIdKelompok());
                    
                    }
+                   System.out.print("Masukkan ID Kelompok : ");
+                   int id = pilih.nextInt();
+                   menu6(daftarLokasi.get(no),id);
+                   System.out.println("Kelompok telah ditambahkan");
+                   break;
+                case 7:
+                   for(int i=0;i<daftarLokasi.size();i++){
+                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                   }
+                   System.out.print("Pilih Lokasi: ");
+                   int pL = pilih.nextInt();
+                   for(int i = 0;i<daftarLokasi.get(pL).getKelompok().size();i++){
+                       System.out.println(i+". "+daftarLokasi.get(pL).getKelompok().get(i).getIdKelompok());
+                   }
+                   System.out.print("Pilih ID Kelompok yang dihapus: ");
+                   int idh = pilih.nextInt();
+                   menu7(daftarLokasi.get(pL),idh);
+                   System.out.println("Kelompok telah dihapus");
+                case 8:
+                    System.out.print("Masukkan Nama Depan: ");
+                   String nDepan = pilih.nextLine();
+                   nDepan = pilih.nextLine();
+                   System.out.print("Masukkan Nama Belakang: ");
+                   String nBelakang = pilih.nextLine();
+                   nBelakang = pilih.nextLine();
+                   System.out.print("Masukkan Jenis Kelamin: ");
+                   String jK = pilih.nextLine();
+                   jK = pilih.nextLine();
+                   System.out.print("Masukkan Tanggal Lahir: ");
+                   String tLahir = pilih.nextLine();
+                   tLahir = pilih.nextLine();
+                   System.out.print("Masukkan Telepon: ");
+                   String tlp = pilih.nextLine();
+                   tlp = pilih.nextLine();
+                   System.out.print("Masukkan Alamat: ");
+                   String almt = pilih.nextLine();
+                   almt = pilih.nextLine();
+                   System.out.print("Masukkan NIP: ");
+                   int nip = pilih.nextInt();
+                   menu8(nDepan,nBelakang,jK,tLahir,tlp,almt,nip);
+                 
                    
-                   long id = pilih.nextLong();
                    
                     
                    
