@@ -164,7 +164,7 @@ public class Aplikasi {
                    System.out.print("Masukkan Telepon: ");
                    telp = pilih.next();
                    System.out.print("Masukkan Alamat: ");
-                   alamat = pilih.nextLine();
+                   pilih.nextLine();
                    alamat = pilih.nextLine();
                    System.out.print("Masukkan IPK: ");
                    ipk = pilih.nextInt();
@@ -248,21 +248,33 @@ public class Aplikasi {
                    System.out.println("Kelompok telah dihapus");
                 case 8:
                     System.out.print("Masukkan Nama Depan: ");
-                   String nDepan = pilih.nextLine();
+                   String nDepan = pilih.next();
                    System.out.print("Masukkan Nama Belakang: ");
-                   String nBelakang = pilih.nextLine();
+                   String nBelakang = pilih.next();
                    System.out.print("Masukkan Jenis Kelamin: ");
-                   String jK = pilih.nextLine();
+                   String jK = pilih.next();
                    System.out.print("Masukkan Tanggal Lahir: ");
-                   String tLahir = pilih.nextLine();
+                   String tLahir = pilih.next();
                    System.out.print("Masukkan Telepon: ");
-                   String tlp = pilih.nextLine();
+                   String tlp = pilih.next();
                    System.out.print("Masukkan Alamat: ");
+                   pilih.nextLine();
                    String almt = pilih.nextLine();
                    System.out.print("Masukkan NIP: ");
                    int nip = pilih.nextInt();
                    menu8(nDepan,nBelakang,jK,tLahir,tlp,almt,nip);
+                   break;
                 case 9:
+                    for(int i = 0; i<daftarPembimbing.size();i++){
+                        System.out.println(i+" "+daftarPembimbing.get(i).getFirstNama()+" "+daftarPembimbing.get(i).getLastNama());
+                        System.out.println("NIP : "+daftarPembimbing.get(i).getNip());
+                    }
+                    System.out.print("Pilih Pembimbing: ");
+                    long llk = pilih.nextLong();
+                    menu9(llk);
+                    break;
+                case 0: plh = 0; break;
+                default: plh = 1; break;
                     
                    
                    
@@ -274,4 +286,5 @@ public class Aplikasi {
        
        
     }   
+}
 }
