@@ -29,16 +29,4 @@ public class Mahasiswa extends Orang{
 		return nim;
 	}
 
-
-        @Override
-	public void display(){
-		System.out.println("Nama :"+super.getFirstNama());
-		System.out.println("Nama Akhir :"+super.getLastNama());
-		System.out.println("Jenis Kelamin :"+super.getJenisKelamin());
-		System.out.println("Tanggal Lahir :"+super.getTanggalLahir());
-		System.out.println("No Telepon : "+super.getTelepon());
-		System.out.println("Alamat : "+super.getAlamat());
-		System.out.println("NIM : "+getNim());
-		System.out.println("IPK : "+getIpk());
-	}
 }

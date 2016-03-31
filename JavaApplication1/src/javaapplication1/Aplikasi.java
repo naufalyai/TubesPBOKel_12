@@ -145,6 +145,7 @@ public class Aplikasi {
            System.out.println("7. Hapus Kelompok");
            System.out.println("8. Tambah Pembimbing");
            System.out.println("9. Hapus Pembimbing");
+           System.out.println("10. Lihat Lokasi dan Kelompok");
            System.out.println("0. Keluar");
            System.out.print("Pilih : ");
            pil = pilih.nextInt();
@@ -246,6 +247,7 @@ public class Aplikasi {
                    int idh = pilih.nextInt();
                    menu7(daftarLokasi.get(pL),idh);
                    System.out.println("Kelompok telah dihapus");
+                   break;
                 case 8:
                     System.out.print("Masukkan Nama Depan: ");
                    String nDepan = pilih.next();
@@ -272,6 +274,26 @@ public class Aplikasi {
                     System.out.print("Pilih Pembimbing: ");
                     long llk = pilih.nextLong();
                     menu9(llk);
+                    break;
+                case 10:
+                   
+                        for (int i = 0; i<daftarLokasi.size();i++){
+                            System.out.println(i+" Lokasi: "+daftarLokasi.get(i).getLokasi());
+                            }
+                        System.out.print("Pilih Lokasi: ");
+                        int hh = pilih.nextInt();
+                        for (int y = 0; y<daftarLokasi.get(hh).getKelompok().size();y++){
+                            System.out.println("* "+daftarLokasi.get(hh).getKelompok().get(y).getIdKelompok());
+                        }
+                        System.out.print("Pilih Kelompok: ");
+                        int jj = pilih.nextInt();
+                        for (int x = 0; x<daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().size();x++){
+                            System.out.println("* "+daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().get(x).getFirstNama()+" "+daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().get(x).getLastNama());
+                        }
+                        pilih.nextLine();
+                        
+                    
+                    
                     break;
                 case 0: plh = 0; break;
                 default: plh = 1; break;

@@ -23,13 +23,4 @@ public class Pembimbing extends Orang {
 	public long getNip(){
 		return nip;
 	}
-    @Override
-        public void display(){
-            System.out.println("Nama : "+super.getFirstNama()+" "+super.getLastNama());
-            System.out.println("Jenis Kelamin : "+super.getJenisKelamin());
-            System.out.println("Tanggal Lahir : "+super.getTanggalLahir());
-            System.out.println("Telepon : "+super.getTelepon());
-            System.out.println("Alamat : "+super.getAlamat());
-            System.out.println("NIP : "+nip);
-        }
 }

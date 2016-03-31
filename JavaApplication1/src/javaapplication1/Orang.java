@@ -23,12 +23,12 @@ public abstract class Orang {
         private Date tgl;
 	private String telepon;
 	private String alamat;
-	private String kota;
 	
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         
 	public Orang(String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat) throws ParseException{
 		this.firstNama=firstNama;
+                this.lastNama = lastNama;
 		this.jenisKelamin=jenisKelamin;
 		tgl=sdf.parse(tanggalLahir);
 		this.telepon=telepon;
@@ -84,14 +84,5 @@ public abstract class Orang {
 	public String getAlamat(){
 		return alamat;
 	}
-	
-	public void setKota(String kota){
-		this.kota=kota;
-	}
-	
-	public String getKota(){
-		return kota;
-        }
         
-        public abstract void display();
 }
