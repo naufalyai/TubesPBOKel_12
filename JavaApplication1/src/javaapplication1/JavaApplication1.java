@@ -21,5 +21,5 @@ public class JavaApplication1 {
         Aplikasi app = new Aplikasi();
         app.mainmenu();
     }
-1    
+  
 }
