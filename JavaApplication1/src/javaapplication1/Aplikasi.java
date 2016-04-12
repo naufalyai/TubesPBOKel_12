@@ -173,30 +173,44 @@ public class Aplikasi {
                    nim = pilih.nextInt();
                    menu1(namaDepan,namaBelakang,jenisK,tanggalLahir,telp,alamat,ipk,nim);
                    System.out.println("Pendaftaran Selesai");
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 2:
                    System.out.println("Menu Pilih Lokasi");
-                   for(int i=0;i<daftarLokasi.size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                   try{
+                       for(int i=0;i<daftarLokasi.size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                       }
+                       System.out.print("Pilih Lokasi: ");
+                       ll = pilih.nextInt();
+                       menu2(daftarLokasi.get(ll).getLokasi());
+                       System.out.println("Lokasi Terpilih");
+                   } catch(Exception e){
+                       System.out.println("Belum Ada Lokasi");
                    }
-                   System.out.print("Pilih Lokasi: ");
-                   ll = pilih.nextInt();
-                   menu2(daftarLokasi.get(ll).getLokasi());
-                   System.out.println("Lokasi Terpilih");
+                    System.out.println("Press 'y' to back to home");
+                    pilih.next();
                    break;
                 case 3:
                    System.out.println("Menu Pilih Kelompok");
-                   for(int i = 0;i<daftarLokasi.get(ll).getKelompok().size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(ll).getKelompok().get(i).getIdKelompok());
+                   try{
+                       for(int i = 0;i<daftarLokasi.get(ll).getKelompok().size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(ll).getKelompok().get(i).getIdKelompok());
                    
+                       }
+                       System.out.print("Masukkan ID Kelompok Pilihan: ");
+                       int kel = pilih.nextInt();
+                       System.out.print("Masukkan NIM anda: ");
+                       long ni = pilih.nextLong();
+                       Mahasiswa mhs = getMahasiswa(ni);
+                       menu3(kel,mhs,daftarLokasi.get(ll));
+                       System.out.println("Anda Telah Masuk Sebagai Anggota Kelompok dengan ID "+kel+" dan Lokasi "+daftarLokasi.get(ll).getLokasi());
+                   } catch(Exception e){
+                       System.out.println("Tidak Ditemukan Kelompok");
                    }
-                   System.out.print("Masukkan ID Kelompok Pilihan: ");
-                   int kel = pilih.nextInt();
-                   System.out.print("Masukkan NIM anda: ");
-                   long ni = pilih.nextLong();
-                   Mahasiswa mhs = getMahasiswa(ni);
-                   menu3(kel,mhs,daftarLokasi.get(ll));
-                   System.out.println("Anda Telah Masuk Sebagai Anggota Kelompok dengan ID "+kel+" dan Lokasi "+daftarLokasi.get(ll).getLokasi());
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 4:
                    System.out.println("Menu Tambah Lokasi"); 
@@ -207,46 +221,65 @@ public class Aplikasi {
                    Lokasi l = new Lokasi(nolok,nL);
                    menu4(l);
                    System.out.println("Lokasi telah ditambah");
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 5:
                    System.out.println("Hapus Lokasi");
-                   for(int i=0;i<daftarLokasi.size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                   try{
+                       for(int i=0;i<daftarLokasi.size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                       }
+                       System.out.print("Pilih Lokasi yang akan dihapus: ");
+                       int kk = pilih.nextInt();
+                       menu5(daftarLokasi.get(kk));
+                       System.out.print("Lokasi telah dihapus");
+                   } catch(Exception e){
+                       System.out.println("Tidak Ditemukan Lokasi");
                    }
-                   System.out.print("Pilih Lokasi yang akan dihapus: ");
-                   int kk = pilih.nextInt();
-                   menu5(daftarLokasi.get(kk));
-                   System.out.print("Lokasi telah dihapus");
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 6:
-              
-                   for(int i=0;i<daftarLokasi.size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
-                   }
-                   System.out.print("Pilih Lokasi : ");
-                   int no = pilih.nextInt();
-                   for(int i = 0;i<daftarLokasi.get(no).getKelompok().size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(ll).getKelompok().get(i).getIdKelompok());
+                   try{
+                       for(int i=0;i<daftarLokasi.size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                       }
+                       System.out.print("Pilih Lokasi : ");
+                       int no = pilih.nextInt();
+                       for(int i = 0;i<daftarLokasi.get(no).getKelompok().size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(ll).getKelompok().get(i).getIdKelompok());
                    
+                       }
+                       System.out.print("Masukkan ID Kelompok : ");
+                       int id = pilih.nextInt();
+                       menu6(daftarLokasi.get(no),id);
+                       System.out.println("Kelompok telah ditambahkan");
+                   } catch(Exception e){
+                       System.out.println("Data Tidak Ditemukan");
                    }
-                   System.out.print("Masukkan ID Kelompok : ");
-                   int id = pilih.nextInt();
-                   menu6(daftarLokasi.get(no),id);
-                   System.out.println("Kelompok telah ditambahkan");
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 7:
-                   for(int i=0;i<daftarLokasi.size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                   try{
+                       for(int i=0;i<daftarLokasi.size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(i).getLokasi());
+                       }
+                       System.out.print("Pilih Lokasi: ");
+                       int pL = pilih.nextInt();
+                       for(int i = 0;i<daftarLokasi.get(pL).getKelompok().size();i++){
+                           System.out.println(i+". "+daftarLokasi.get(pL).getKelompok().get(i).getIdKelompok());
+                       }
+                       System.out.print("Pilih ID Kelompok yang dihapus: ");
+                       int idh = pilih.nextInt();
+                       menu7(daftarLokasi.get(pL),idh);
+                       System.out.println("Kelompok telah dihapus");
+                   } catch(Exception e){
+                       System.out.println("Data Tidak Ditemukan");
                    }
-                   System.out.print("Pilih Lokasi: ");
-                   int pL = pilih.nextInt();
-                   for(int i = 0;i<daftarLokasi.get(pL).getKelompok().size();i++){
-                       System.out.println(i+". "+daftarLokasi.get(pL).getKelompok().get(i).getIdKelompok());
-                   }
-                   System.out.print("Pilih ID Kelompok yang dihapus: ");
-                   int idh = pilih.nextInt();
-                   menu7(daftarLokasi.get(pL),idh);
-                   System.out.println("Kelompok telah dihapus");
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 8:
                     System.out.print("Masukkan Nama Depan: ");
@@ -265,21 +298,29 @@ public class Aplikasi {
                    System.out.print("Masukkan NIP: ");
                    int nip = pilih.nextInt();
                    menu8(nDepan,nBelakang,jK,tLahir,tlp,almt,nip);
+                   System.out.println("Press 'y' to back to home");
+                   pilih.next();
                    break;
                 case 9:
-                    for(int i = 0; i<daftarPembimbing.size();i++){
-                        System.out.println(i+" "+daftarPembimbing.get(i).getFirstNama()+" "+daftarPembimbing.get(i).getLastNama());
-                        System.out.println("NIP : "+daftarPembimbing.get(i).getNip());
+                    try{
+                        for(int i = 0; i<daftarPembimbing.size();i++){
+                            System.out.println(i+" "+daftarPembimbing.get(i).getFirstNama()+" "+daftarPembimbing.get(i).getLastNama());
+                            System.out.println("NIP : "+daftarPembimbing.get(i).getNip());
+                        }
+                        System.out.print("Pilih Pembimbing: ");
+                        long llk = pilih.nextLong();
+                        menu9(llk);
+                    } catch(Exception e){
+                        System.out.println("Data Tidak Ditemukan");
                     }
-                    System.out.print("Pilih Pembimbing: ");
-                    long llk = pilih.nextLong();
-                    menu9(llk);
+                    System.out.println("Press 'y' to back to home");
+                    pilih.next();
                     break;
                 case 10:
-                   
+                    try{
                         for (int i = 0; i<daftarLokasi.size();i++){
                             System.out.println(i+" Lokasi: "+daftarLokasi.get(i).getLokasi());
-                            }
+                        }
                         System.out.print("Pilih Lokasi: ");
                         int hh = pilih.nextInt();
                         for (int y = 0; y<daftarLokasi.get(hh).getKelompok().size();y++){
@@ -292,8 +333,11 @@ public class Aplikasi {
                         }
                         pilih.nextLine();
                         
-                    
-                    
+                    } catch(Exception e){
+                        System.out.println("Data Tidak Ditemukan");
+                    }
+                    System.out.println("Press 'y' to back to home");
+                    pilih.next();    
                     break;
                 case 0: plh = 0; break;
                 default: plh = 1; break;
