@@ -29,4 +29,10 @@ public class Mahasiswa extends Orang{
 		return nim;
 	}
 
+    @Override
+    public String toString() {
+        return "Mahasiswa{" + "ipk=" + ipk + ", nim=" + nim + '}';
+    }
+        
+
 }

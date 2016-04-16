@@ -8,6 +8,7 @@ package View;
 import java.awt.Panel;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
@@ -59,9 +60,18 @@ public class Login extends javax.swing.JFrame {
 
         jLabel9.setText("MAHASISWA");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("D:\\l.png")); // NOI18N
+        TFUsernameMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFUsernameMhsActionPerformed(evt);
+            }
+        });
 
         BLoginMhs.setText("Login");
+        BLoginMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BLoginMhsActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("Password");
 
@@ -126,13 +136,16 @@ public class Login extends javax.swing.JFrame {
 
         PAdmin.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\l.png")); // NOI18N
-
         jLabel5.setText("Password");
 
         jLabel6.setText("Username");
 
         BLoginAdmin.setText("Login");
+        BLoginAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BLoginAdminActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("ADMIN");
 
@@ -201,11 +214,25 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BLoginMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLoginMhsActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_BLoginMhsActionPerformed
+
+    private void BLoginAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLoginAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BLoginAdminActionPerformed
+
+    private void TFUsernameMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFUsernameMhsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFUsernameMhsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,6 +310,15 @@ public class Login extends javax.swing.JFrame {
     public JTabbedPane getjTabbedPane1() {
         return jTabbedPane1;
     }
+    public void resetLM(){
+        TFUsernameMhs.setText("");
+        TFPasswordMhs.setText("");
+    }
+    public void resetLA(){
+        TFUsernameAdmin.setText("");
+        TFPasswordAdmin.setText("");
+    }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

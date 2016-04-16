@@ -7,6 +7,7 @@ package View;
 
 import java.awt.List;
 import java.awt.event.ActionListener;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -37,6 +38,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup3 = new javax.swing.ButtonGroup();
         TPMahasiswa = new javax.swing.JTabbedPane();
         PDaftar = new javax.swing.JPanel();
         DaftarLabel = new javax.swing.JLabel();
@@ -64,10 +66,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         ListLokasi = new java.awt.List();
         BKembali1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        TFULokasi = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         PPilihKelompok = new javax.swing.JPanel();
         ListKelompok = new java.awt.List();
         jLabel8 = new javax.swing.JLabel();
         BKembali2 = new javax.swing.JButton();
+        TFIDK = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
         PView = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -101,8 +107,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup3.add(RBLaki);
         RBLaki.setText("Laki-laki");
 
+        buttonGroup3.add(RBPerempuan);
         RBPerempuan.setText("Perempuan");
 
         CBTanggal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
@@ -136,8 +144,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PDaftarLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PDaftarLayout.createSequentialGroup()
+                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
                         .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PDaftarLayout.createSequentialGroup()
                                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,12 +163,6 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                 .addComponent(CBBulan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(CBTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PDaftarLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(RBLaki)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(RBPerempuan))
                             .addGroup(PDaftarLayout.createSequentialGroup()
                                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PDaftarLayout.createSequentialGroup()
@@ -182,12 +184,20 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                             .addGap(121, 121, 121)))
                                     .addGroup(PDaftarLayout.createSequentialGroup()
                                         .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                                         .addComponent(BSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(54, 54, 54))
-                    .addGroup(PDaftarLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(DaftarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(359, 359, 359))))
+                        .addGap(359, 359, 359))
+                    .addGroup(PDaftarLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(RBLaki)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RBPerempuan)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         PDaftarLayout.setVerticalGroup(
             PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,7 +237,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel9)
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(PDaftarLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -247,26 +257,31 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         ListLokasi.setBackground(new java.awt.Color(204, 204, 204));
 
-        BKembali1.setText("Kembali");
+        BKembali1.setText("Pilih");
 
         jLabel10.setText("Pilih Lokasi : ");
+
+        jLabel15.setText("Masukkan Nama Lokasi");
 
         javax.swing.GroupLayout PPilihLokasiLayout = new javax.swing.GroupLayout(PPilihLokasi);
         PPilihLokasi.setLayout(PPilihLokasiLayout);
         PPilihLokasiLayout.setHorizontalGroup(
             PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                .addContainerGap(351, Short.MAX_VALUE)
+                .addContainerGap(369, Short.MAX_VALUE)
                 .addComponent(BKembali1)
                 .addGap(63, 63, 63))
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
                 .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(ListLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PPilihLokasiLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel10)))
+                        .addComponent(jLabel10))
+                    .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ListLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PPilihLokasiLayout.setVerticalGroup(
@@ -276,9 +291,13 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ListLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(BKembali1)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BKembali1)
+                    .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Lokasi", PPilihLokasi);
@@ -286,19 +305,28 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         PPilihKelompok.setBackground(new java.awt.Color(102, 102, 102));
 
         ListKelompok.setBackground(new java.awt.Color(204, 204, 204));
+        ListKelompok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListKelompokActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Pilih Kelompok: ");
 
-        BKembali2.setText("Kembali");
+        BKembali2.setText("Pilih");
+
+        TFIDK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFIDKActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("Masukkan ID Kelompok");
 
         javax.swing.GroupLayout PPilihKelompokLayout = new javax.swing.GroupLayout(PPilihKelompok);
         PPilihKelompok.setLayout(PPilihKelompokLayout);
         PPilihKelompokLayout.setHorizontalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihKelompokLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BKembali2)
-                .addGap(68, 68, 68))
             .addGroup(PPilihKelompokLayout.createSequentialGroup()
                 .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
@@ -306,8 +334,15 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(ListKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ListKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14))))
                 .addContainerGap(228, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihKelompokLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BKembali2)
+                .addGap(71, 71, 71))
         );
         PPilihKelompokLayout.setVerticalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,9 +351,13 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ListKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addComponent(BKembali2)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addGap(5, 5, 5)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BKembali2)
+                    .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Kelompok", PPilihKelompok);
@@ -373,7 +412,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addComponent(TFInsKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addComponent(BCari)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Lihat Kelompok dan Lokasi", PView);
@@ -403,6 +442,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private void TFNamadpnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFNamadpnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFNamadpnActionPerformed
+
+    private void ListKelompokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListKelompokActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListKelompokActionPerformed
+
+    private void TFIDKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFIDKActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFIDKActionPerformed
 
     /**
      * @param args the command line arguments
@@ -544,7 +591,49 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     public JTabbedPane getTPMahasiswa() {
         return TPMahasiswa;
     }
-    
+
+    public ButtonGroup getButtonGroup3() {
+        return buttonGroup3;
+    }
+
+    public JTextField getTFIDK() {
+        return TFIDK;
+    }
+
+    public JTextField getTFULokasi() {
+        return TFULokasi;
+    }
+    public void rDaftarGeladi(){
+        TFNamadpn.setText("");
+        TFNamablk.setText("");
+        TFAlamat.setText("");
+        TFTelepon.setText("");
+        TFipk.setText("");
+        TFnim.setText("");
+    }
+    public String convertTanggal(String n){
+        if (n=="1"){
+            return "01";
+        } else if(n=="2"){
+            return "02";
+        } else if(n=="3"){
+            return "03";
+        } else if(n=="4"){
+            return "04";
+        } else if(n=="5"){
+            return "05";
+        } else if(n=="6"){
+            return "06";
+        } else if(n=="7"){
+            return "07";
+        } else if (n=="8"){
+            return "08";
+        } else if (n=="9"){
+            return "09";
+        } else {
+            return n;
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BCari;
@@ -564,19 +653,24 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private javax.swing.JRadioButton RBLaki;
     private javax.swing.JRadioButton RBPerempuan;
     private javax.swing.JTextField TFAlamat;
+    private javax.swing.JTextField TFIDK;
     private javax.swing.JTextField TFInsKelompok;
     private javax.swing.JTextField TFInsLokasi;
     private javax.swing.JTextField TFNamablk;
     private javax.swing.JTextField TFNamadpn;
     private javax.swing.JTextField TFTelepon;
+    private javax.swing.JTextField TFULokasi;
     private javax.swing.JTextField TFipk;
     private javax.swing.JTextField TFnim;
     private javax.swing.JTabbedPane TPMahasiswa;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

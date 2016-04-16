@@ -23,4 +23,10 @@ public class Pembimbing extends Orang {
 	public long getNip(){
 		return nip;
 	}
+
+    @Override
+    public String toString() {
+        return "Pembimbing{" + "nip=" + nip + '}';
+    }
+        
 }

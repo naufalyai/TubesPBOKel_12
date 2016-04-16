@@ -43,5 +43,11 @@ public class Kelompok {
     public ArrayList<Mahasiswa> getAnggota() {
         return anggota;
     }
+
+    @Override
+    public String toString() {
+        return "Kelompok{" + "idKelompok=" + idKelompok + ", anggota=" + anggota + '}';
+    }
+    
     
 }

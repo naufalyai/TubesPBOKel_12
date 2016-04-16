@@ -69,5 +69,10 @@ public class Lokasi {
     public Pembimbing getPembimbing() {
         return pembimbing;
     }
+
+    @Override
+    public String toString() {
+        return "Lokasi{" + "pembimbing=" + pembimbing + ", kelompok=" + kelompok + ", lokasi=" + lokasi + ", nomorLokasi=" + nomorLokasi + '}';
+    }
     
 }
