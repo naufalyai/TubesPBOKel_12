@@ -5,6 +5,7 @@
  */
 package javaapplication1;
 
+import database.Database;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.*;
@@ -18,17 +19,20 @@ public class Aplikasi {
     private ArrayList<Pembimbing> daftarPembimbing;
     private ArrayList<Mahasiswa> daftarMahasiswa;
     private ArrayList<Lokasi> daftarLokasi;
-    
-    public void buatDaftar(){
+    private Database con;
+    public Aplikasi(){
         daftarPembimbing = new ArrayList<>();
         daftarMahasiswa = new ArrayList<>();
         daftarLokasi = new ArrayList<>();
+        con = new Database();
+        con.connect();
     }
     public void addPembimbing(Pembimbing p){
         daftarPembimbing.add(p);
     }
     public void addMahasiswa(Mahasiswa m){
         daftarMahasiswa.add(m);
+        con.saveMahasiswa(m);
     }
     public void addLokasi(Lokasi l){
         daftarLokasi.add(l);
@@ -73,8 +77,13 @@ public class Aplikasi {
     
     //daftar geladi
    public void menu1(String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat, int ipk, long nim) throws ParseException{
-       Mahasiswa m = new Mahasiswa(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat,ipk,nim);
-       daftarMahasiswa.add(m);
+       try{
+           Mahasiswa m = new Mahasiswa(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat,ipk,nim);
+           daftarMahasiswa.add(m);
+       } catch(Exception e){
+           System.out.println("Error");
+       }
+       
    }
    //pilih lokasi
    public Lokasi menu2(String lokasi){
@@ -132,7 +141,6 @@ public class Aplikasi {
        int plh = 1;
        int pil;
        int ll = 0;
-       buatDaftar();
        Scanner pilih = new Scanner(System.in); 
        while (plh != 0) {
            System.out.println("=========Menu========");

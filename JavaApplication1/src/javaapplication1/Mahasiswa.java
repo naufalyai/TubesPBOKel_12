@@ -2,12 +2,18 @@ package javaapplication1;
 
 
 import java.text.ParseException;
+import java.util.Date;
 
 public class Mahasiswa extends Orang{
 	private int ipk;
 	private long nim;
 	
 	public Mahasiswa ( String firstNama, String lastNama, String jenisKelamin, String tanggalLahir, String telepon, String alamat, int ipk, long nim) throws ParseException{
+		super(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat);
+		this.ipk=ipk;
+		this.nim=nim;
+	}
+        public Mahasiswa ( String firstNama, String lastNama, String jenisKelamin, Date tanggalLahir, String telepon, String alamat, int ipk, long nim) throws ParseException{
 		super(firstNama,lastNama,jenisKelamin, tanggalLahir, telepon,alamat);
 		this.ipk=ipk;
 		this.nim=nim;

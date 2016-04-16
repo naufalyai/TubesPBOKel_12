@@ -22,7 +22,7 @@ public class JavaApplication1 {
         // TODO code application logic here
         Aplikasi app = new Aplikasi();
         app.mainmenu();
-        Controller c = new Controller(app);
+        //Controller c = new Controller(app);
         
     }
   

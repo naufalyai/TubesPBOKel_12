@@ -7,6 +7,9 @@ package View;
 
 import java.awt.List;
 import java.awt.event.ActionListener;
+import java.util.Date;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -74,6 +77,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         BKembali2 = new javax.swing.JButton();
         TFIDK = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
+        TFgetNIMMhs = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
         PView = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -256,6 +261,11 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         PPilihLokasi.setBackground(new java.awt.Color(102, 102, 102));
 
         ListLokasi.setBackground(new java.awt.Color(204, 204, 204));
+        ListLokasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListLokasiActionPerformed(evt);
+            }
+        });
 
         BKembali1.setText("Pilih");
 
@@ -268,21 +278,27 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         PPilihLokasiLayout.setHorizontalGroup(
             PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                .addContainerGap(369, Short.MAX_VALUE)
-                .addComponent(BKembali1)
-                .addGap(63, 63, 63))
-            .addGroup(PPilihLokasiLayout.createSequentialGroup()
                 .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PPilihLokasiLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(jLabel10))
-                    .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ListLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                            .addGap(70, 70, 70)
+                            .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ListLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel15))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihLokasiLayout.createSequentialGroup()
+                            .addContainerGap(70, Short.MAX_VALUE)
+                            .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihLokasiLayout.createSequentialGroup()
+                                    .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(108, 108, 108))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihLokasiLayout.createSequentialGroup()
+                                    .addComponent(BKembali1)
+                                    .addGap(18, 18, 18))))))
+                .addGap(58, 58, 58))
         );
         PPilihLokasiLayout.setVerticalGroup(
             PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,10 +310,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BKembali1)
-                    .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BKembali1)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Lokasi", PPilihLokasi);
@@ -323,6 +339,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         jLabel14.setText("Masukkan ID Kelompok");
 
+        TFgetNIMMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFgetNIMMhsActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Masukkan NIM");
+
         javax.swing.GroupLayout PPilihKelompokLayout = new javax.swing.GroupLayout(PPilihKelompok);
         PPilihKelompok.setLayout(PPilihKelompokLayout);
         PPilihKelompokLayout.setHorizontalGroup(
@@ -335,14 +359,16 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ListKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14))))
-                .addContainerGap(228, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihKelompokLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BKembali2)
-                .addGap(71, 71, 71))
+                            .addComponent(jLabel14)
+                            .addGroup(PPilihKelompokLayout.createSequentialGroup()
+                                .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                    .addComponent(TFIDK, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(93, 93, 93)
+                                .addComponent(BKembali2))
+                            .addComponent(jLabel16)
+                            .addComponent(ListKelompok, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         PPilihKelompokLayout.setVerticalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,10 +380,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel16)
+                .addGap(2, 2, 2)
                 .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BKembali2)
-                    .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                    .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BKembali2))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Kelompok", PPilihKelompok);
@@ -443,13 +473,21 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFNamadpnActionPerformed
 
-    private void ListKelompokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListKelompokActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ListKelompokActionPerformed
-
     private void TFIDKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFIDKActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFIDKActionPerformed
+
+    private void ListLokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListLokasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListLokasiActionPerformed
+
+    private void TFgetNIMMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFgetNIMMhsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFgetNIMMhsActionPerformed
+
+    private void ListKelompokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListKelompokActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListKelompokActionPerformed
 
     /**
      * @param args the command line arguments
@@ -603,6 +641,11 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     public JTextField getTFULokasi() {
         return TFULokasi;
     }
+
+    public JTextField getTFgetNIMMhs() {
+        return TFgetNIMMhs;
+    }
+    
     public void rDaftarGeladi(){
         TFNamadpn.setText("");
         TFNamablk.setText("");
@@ -611,28 +654,64 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         TFipk.setText("");
         TFnim.setText("");
     }
-    public String convertTanggal(String n){
-        if (n=="1"){
+    /*public String convertTanggal(JComboBox<String> n){
+        if (n.getSelectedItem()=="1"){
             return "01";
-        } else if(n=="2"){
+        } else if(n.getSelectedItem().toString()=="2"){
             return "02";
-        } else if(n=="3"){
+        } else if(n.getSelectedItem().toString()=="3"){
             return "03";
-        } else if(n=="4"){
+        } else if(n.getSelectedItem().toString()=="4"){
             return "04";
-        } else if(n=="5"){
+        } else if(n.getSelectedItem().toString()=="5"){
             return "05";
-        } else if(n=="6"){
+        } else if(n.getSelectedItem().toString()=="6"){
             return "06";
-        } else if(n=="7"){
+        } else if(n.getSelectedItem().toString()=="7"){
             return "07";
-        } else if (n=="8"){
+        } else if (n.getSelectedItem().toString()=="8"){
             return "08";
-        } else if (n=="9"){
+        } else if (n.getSelectedItem().toString()=="9"){
             return "09";
         } else {
-            return n;
+            return n.getSelectedItem().toString();
         }
+    }
+    public String convertBulan(JComboBox<String> x){
+        String s = null;
+        if (x.getSelectedItem().toString() == "Januari"){
+             s="01";
+        } else if(x.getSelectedItem().toString()=="Februari"){
+            s="02";
+        } else if(x.getSelectedItem().toString() == "Maret"){
+            s="03";
+        } else if (x.getSelectedItem().toString() == "April"){
+            s="04";
+        } else if (x.getSelectedItem().toString() == "Mei"){
+            s="05";
+        } else if (x.getSelectedItem().toString() == "Juni"){
+            s="06";
+        } else if (x.getSelectedItem().toString() == "Juli"){
+            s="07";
+        } else if (x.getSelectedItem().toString() == "Agustus"){
+            s="08";
+        } else if (x.getSelectedItem().toString() == "September"){
+            s="09";
+        } else if (x.getSelectedItem().toString()=="Oktober"){
+            s="10";
+        } else if (x.getSelectedItem().toString() == "November"){
+            s="11";
+        } else {
+            s="12";
+        }
+        return s;
+    }*/
+    public Date getBirth(){
+        Date b = new Date();
+        b.setDate(CBTanggal.getSelectedIndex()+1);
+        b.setMonth(CBBulan.getSelectedIndex()+1);
+        b.setYear(CBTahun.getSelectedIndex()+1989);
+        return b;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -660,6 +739,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private javax.swing.JTextField TFNamadpn;
     private javax.swing.JTextField TFTelepon;
     private javax.swing.JTextField TFULokasi;
+    private javax.swing.JTextField TFgetNIMMhs;
     private javax.swing.JTextField TFipk;
     private javax.swing.JTextField TFnim;
     private javax.swing.JTabbedPane TPMahasiswa;
@@ -671,6 +751,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

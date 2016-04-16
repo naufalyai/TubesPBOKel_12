@@ -7,6 +7,7 @@ package View;
 
 import java.awt.List;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
@@ -675,6 +676,13 @@ public class MenuAdmin extends javax.swing.JFrame {
 
     public JTabbedPane getTPAdmin() {
         return TPAdmin;
+    }
+    public Date BirthAdmin(){
+       Date b = new Date();
+       b.setDate(CBTanggalpembimbing.getSelectedIndex()+1);
+       b.setMonth(CBBulanpembimbing.getSelectedIndex()+1);
+       b.setYear(CBTahunpembimbing.getSelectedIndex()+89);
+       return b;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -34,6 +34,14 @@ public abstract class Orang {
 		this.telepon=telepon;
 		this.alamat=alamat;
 	}
+        public Orang(String firstNama, String lastNama, String jenisKelamin, Date tanggalLahir, String telepon, String alamat) throws ParseException{
+		this.firstNama=firstNama;
+                this.lastNama = lastNama;
+		this.jenisKelamin=jenisKelamin;
+		tgl=tanggalLahir;
+		this.telepon=telepon;
+		this.alamat=alamat;
+	}
 	
 	
 	
@@ -66,8 +74,13 @@ public abstract class Orang {
 	}
 	
 	public String getTanggalLahir(){
-		return tanggalLahir;
+		return String.valueOf(tgl.getDate())+"/"+String.valueOf(tgl.getMonth())+"/"+String.valueOf(tgl.getYear());
 	}
+
+        public Date getTgl() {
+            return tgl;
+        }
+        
 	
 	public void setTelepon(String telepon){
 		this.telepon=telepon;

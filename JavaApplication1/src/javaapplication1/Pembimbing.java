@@ -6,6 +6,7 @@
 package javaapplication1;
 
 import java.text.ParseException;
+import java.util.Date;
 
 /**
  *
@@ -14,6 +15,10 @@ import java.text.ParseException;
 public class Pembimbing extends Orang {
     private long nip;
 	public Pembimbing(String firstNama,String lastNama, String jenisKelamin,String tanggalLahir,String telepon,String alamat,long nip) throws ParseException{
+		super(firstNama,lastNama,jenisKelamin,tanggalLahir,telepon,alamat);
+		this.nip = nip;
+	}
+        public Pembimbing(String firstNama,String lastNama, String jenisKelamin,Date tanggalLahir,String telepon,String alamat,long nip) throws ParseException{
 		super(firstNama,lastNama,jenisKelamin,tanggalLahir,telepon,alamat);
 		this.nip = nip;
 	}

@@ -5,9 +5,11 @@
  */
 package Controller;
 import View.*;
+import database.Database;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javaapplication1.*;
@@ -17,7 +19,7 @@ import javax.swing.*;
  * @author rannypa
  */
 public class Controller implements ActionListener {
-
+    private Database o = new Database();
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
@@ -28,6 +30,7 @@ public class Controller implements ActionListener {
         } else{
            m.addlistener(this);
            m.setVisible(true);
+           l.setVisible(false);
             }
         }
         if(ae.getSource().equals(l.getBLoginAdmin())){
@@ -56,28 +59,30 @@ public class Controller implements ActionListener {
         if (ae.getSource().equals(m.getBSimpan())){
             String name = m.getTFNamadpn().getText();
             String name2 = m.getTFNamablk().getText();
-            String name3 = null;
-            if(m.getButtonGroup3().getSelection().equals(m.getRBLaki())){
+            String name3;
+            if(m.getRBLaki().isSelected()){
                 name3 = "Laki-laki";
             } else{
                 name3 = "Perempuan";
             }
-            String name8 = m.convertTanggal(m.getCBTanggal().toString())+"/"+m.getCBBulan().toString()+"/"+m.getCBTahun().toString();
+            Date name8 = m.getBirth();
             String name4 = m.getTFTelepon().getText();
             String name5 = m.getTFAlamat().getText();
             int name6 = Integer.parseInt(m.getTFipk().getText());
             long name7 = Long.parseLong(m.getTFnim().getText());
             nn = name7;
             try {
-                model.menu1(name, name2, name3, name8, name4, name5, name6, name7);
+                Mahasiswa m = new Mahasiswa(name, name2, name3, name8, name4, name5, name6, name7);
+                model.addMahasiswa(m);
             } catch (ParseException ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(m, "Tidak Dapat Ditambahkan", "Error!!!", JOptionPane.WARNING_MESSAGE);
+                
             }
             JOptionPane.showMessageDialog(m, "Mahasiswa Berhasil Didaftarkan");
             m.rDaftarGeladi();
             
         }
-        
+           
     }
     private Lokasi h=null;
     private Login l;
