@@ -29,9 +29,6 @@ public class Pembimbing extends Orang {
 		return nip;
 	}
 
-    @Override
-    public String toString() {
-        return "Pembimbing{" + "nip=" + nip + '}';
-    }
+   
         
 }

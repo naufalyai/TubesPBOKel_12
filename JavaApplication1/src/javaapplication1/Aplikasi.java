@@ -36,6 +36,7 @@ public class Aplikasi {
     }
     public void addLokasi(Lokasi l){
         daftarLokasi.add(l);
+        con.saveLokasi(l);
     }
 
     public Pembimbing getPembimbing(long nip) {
@@ -108,6 +109,7 @@ public class Aplikasi {
    //tambah lokasi
    public void menu4(Lokasi l){
        daftarLokasi.add(l);
+       con.saveLokasi(l);
    }
    //hapus lokasi
    public void menu5(Lokasi l){

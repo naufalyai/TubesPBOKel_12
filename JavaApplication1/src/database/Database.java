@@ -11,6 +11,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javaapplication1.Kelompok;
+import javaapplication1.Lokasi;
 import javaapplication1.Mahasiswa;
 import javax.swing.JOptionPane;
 
@@ -58,5 +60,39 @@ public class Database {
         }
         return m;
     }
-    
+  public void saveLokasi (Lokasi l) {
+
+        try {
+
+            String query = "INSERT INTO lokasi(nomorLokasi,nlokasi) VALUES ("+l.getNomorLokasi()+",'"+l.getLokasi()+"')";
+            st.execute(query);
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(n, "Lokasi tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+  public Lokasi getLokasi(int idLokasi){
+        Lokasi ll = null;
+        try{
+            String query = "SELECT * FROM mahasiswa WHERE nomorLokasi= "+idLokasi;
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                ll = new Lokasi(rs.getInt(1),rs.getString(2));
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(n, "Error: Mahasiswa Tidak Ada", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        return ll;
+    }
+  public void saveKelompok(Kelompok k){
+      try {
+
+            String query = "INSERT INTO kelompok(idKelompok) VALUES ("+k.getIdKelompok()+")";
+            st.execute(query);
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(n, "Kelompok tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+  }
+  
 }

@@ -82,6 +82,20 @@ public class Controller implements ActionListener {
             m.rDaftarGeladi();
             
         }
+        if(ae.getSource().equals(l.getBLoginAdmin())){
+            if((!l.getTFUsernameAdmin().getText().equals("Admin"))&&(!l.getTFPasswordAdmin().getText().equals("test"))){
+                JOptionPane.showMessageDialog(l, "Username dan Password Tidak Ditemukan", "Error!!!", JOptionPane.WARNING_MESSAGE);
+        } else{
+           a.addListener(this);
+           a.setVisible(true);
+           l.setVisible(false);
+           JOptionPane.showConfirmDialog(m, "Anda Berhasil Masuk");
+            }
+        }
+        if(ae.getSource().equals(a.getBSimpanLokasi())){
+            Lokasi lk = new Lokasi(Integer.parseInt(a.getTFnomorLokasi().getText()),a.getTFtambahnamalokasi().getText());
+            model.menu4(lk);
+        }
            
     }
     private Lokasi h=null;

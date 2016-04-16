@@ -21,8 +21,8 @@ public class JavaApplication1 {
     public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         Aplikasi app = new Aplikasi();
-        app.mainmenu();
-        //Controller c = new Controller(app);
+        //app.mainmenu();
+        Controller c = new Controller(app);
         
     }
   

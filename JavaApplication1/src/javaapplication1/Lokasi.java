@@ -15,7 +15,7 @@ public class Lokasi {
     private Pembimbing pembimbing;
     private ArrayList<Kelompok> kelompok;
     private String lokasi;
-    public int nomorLokasi;
+    private int nomorLokasi;
 
     public Lokasi(int nomorLokasi) {
         this.nomorLokasi = nomorLokasi;
@@ -33,6 +33,10 @@ public class Lokasi {
         this.lokasi = lokasi;
         kelompok= new ArrayList();
         this.pembimbing = pembimbing;
+    }
+
+    public int getNomorLokasi() {
+        return nomorLokasi;
     }
     
     
