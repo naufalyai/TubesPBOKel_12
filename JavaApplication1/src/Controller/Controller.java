@@ -91,10 +91,15 @@ public class Controller implements ActionListener {
            l.setVisible(false);
            JOptionPane.showConfirmDialog(m, "Anda Berhasil Masuk");
             }
+        l.resetLA();
         }
         if(ae.getSource().equals(a.getBSimpanLokasi())){
             Lokasi lk = new Lokasi(Integer.parseInt(a.getTFnomorLokasi().getText()),a.getTFtambahnamalokasi().getText());
             model.menu4(lk);
+            a.resetIL();
+            //o.fillListBox(a);
+            
+            
         }
            
     }

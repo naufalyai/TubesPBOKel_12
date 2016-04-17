@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
@@ -56,7 +57,10 @@ public class MenuAdmin extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         TFIdKelompoktambahklp = new javax.swing.JTextField();
         BSimpanKelompok = new javax.swing.JButton();
-        LLokasiklptambahklp = new java.awt.List();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jListLokasi = new javax.swing.JList<>();
+        jLabel22 = new javax.swing.JLabel();
+        jTFUrutanL = new javax.swing.JTextField();
         PHapusKelompok = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -118,7 +122,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addGroup(PTambahLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TFtambahnamalokasi, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                             .addComponent(TFnomorLokasi))))
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addContainerGap(244, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PTambahLokasiLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BSimpanLokasi)
@@ -164,7 +168,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                     .addGroup(PHapusLokasiLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel4)))
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(274, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PHapusLokasiLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BHapusLokasi)
@@ -194,47 +198,73 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         BSimpanKelompok.setText("Simpan");
 
+        jListLokasi.setToolTipText("");
+        jListLokasi.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jListLokasiValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jListLokasi);
+
+        jLabel22.setText("Masukkan Urutan Lokasi");
+
         javax.swing.GroupLayout PTambahKelompokLayout = new javax.swing.GroupLayout(PTambahKelompok);
         PTambahKelompok.setLayout(PTambahKelompokLayout);
         PTambahKelompokLayout.setHorizontalGroup(
             PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PTambahKelompokLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
                 .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PTambahKelompokLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7)))
+                        .addComponent(jLabel7)
+                        .addContainerGap())
                     .addGroup(PTambahKelompokLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TFIdKelompoktambahklp)
-                    .addComponent(LLokasiklptambahklp, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
-                .addContainerGap(198, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PTambahKelompokLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BSimpanKelompok)
-                .addGap(77, 77, 77))
+                        .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PTambahKelompokLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BSimpanKelompok)
+                                .addGap(48, 48, 48))
+                            .addGroup(PTambahKelompokLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TFIdKelompoktambahklp, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                    .addComponent(jTFUrutanL))
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         PTambahKelompokLayout.setVerticalGroup(
             PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PTambahKelompokLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel6)
-                .addGap(54, 54, 54)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
                 .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PTambahKelompokLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BSimpanKelompok)
+                        .addGap(128, 128, 128))
                     .addGroup(PTambahKelompokLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(TFIdKelompoktambahklp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BSimpanKelompok))
-                    .addComponent(LLokasiklptambahklp, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(168, Short.MAX_VALUE))
+                        .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PTambahKelompokLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PTambahKelompokLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jTFUrutanL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)
+                                .addGroup(PTambahKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel8)
+                                    .addComponent(TFIdKelompoktambahklp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(45, 142, Short.MAX_VALUE))))
         );
 
         TPAdmin.addTab("Tambah Kelompok", PTambahKelompok);
@@ -265,7 +295,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addGroup(PHapusKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(LLokasiKlphapuskelompok, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                     .addComponent(TFIdKlphapuskelompok))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(217, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PHapusKelompokLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BHapusKelompok)
@@ -311,7 +341,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addComponent(jLabel13)
                         .addGap(19, 19, 19)
                         .addComponent(LpilihPembimbing, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(224, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PHapusPembimbingLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BHapusPembimbing)
@@ -419,7 +449,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                                     .addComponent(CBTahunpembimbing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(113, 113, 113)))
                             .addComponent(TFNamablkPembimbing, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PTambahPembimbingLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BSimpan2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -432,7 +462,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addComponent(jLabel14)
                         .addComponent(jLabel17)
                         .addComponent(jLabel16))
-                    .addContainerGap(372, Short.MAX_VALUE)))
+                    .addContainerGap(426, Short.MAX_VALUE)))
         );
         PTambahPembimbingLayout.setVerticalGroup(
             PTambahPembimbingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,7 +519,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TPAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+            .addComponent(TPAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -510,6 +540,10 @@ public class MenuAdmin extends javax.swing.JFrame {
     private void CBTanggalpembimbingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBTanggalpembimbingActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CBTanggalpembimbingActionPerformed
+
+    private void jListLokasiValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListLokasiValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jListLokasiValueChanged
 
     /**
      * @param args the command line arguments
@@ -594,9 +628,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         return LLokasiKlphapuskelompok;
     }
 
-    public List getLLokasiklptambahklp() {
-        return LLokasiklptambahklp;
-    }
 
     public List getLpilihPembimbing() {
         return LpilihPembimbing;
@@ -684,6 +715,20 @@ public class MenuAdmin extends javax.swing.JFrame {
        b.setYear(CBTahunpembimbing.getSelectedIndex()+89);
        return b;
     }
+    public void resetIL(){
+        TFtambahnamalokasi.setText("");
+        TFnomorLokasi.setText("");
+    }
+
+    public JList<String> getjListLokasi() {
+        return jListLokasi;
+    }
+
+    public JTextField getjTFUrutanL() {
+        return jTFUrutanL;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BHapusKelompok;
@@ -696,7 +741,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CBTahunpembimbing;
     private javax.swing.JComboBox<String> CBTanggalpembimbing;
     private java.awt.List LLokasiKlphapuskelompok;
-    private java.awt.List LLokasiklptambahklp;
     private java.awt.List LpilihPembimbing;
     private javax.swing.JPanel PHapusKelompok;
     private javax.swing.JPanel PHapusLokasi;
@@ -731,6 +775,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -738,5 +783,8 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jListLokasi;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTFUrutanL;
     // End of variables declaration//GEN-END:variables
 }

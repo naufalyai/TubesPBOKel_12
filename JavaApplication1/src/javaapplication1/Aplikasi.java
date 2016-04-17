@@ -118,6 +118,7 @@ public class Aplikasi {
    //tambah kelompok
    public void menu6(Lokasi l,int idK){
        l.createKelompok(idK);
+       con.saveKelompok(l, idK);
    }
    //hapus kelompok
    public void menu7(Lokasi l, int idK){
