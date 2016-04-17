@@ -22,6 +22,7 @@ public class Controller implements ActionListener {
     private Database o = new Database();
     @Override
     public void actionPerformed(ActionEvent ae) {
+        o.connect();
         Object source = ae.getSource();
         //frame MenuMhaasiswa tab Daftar Geladi
         if (ae.getSource().equals(l.getBLoginMhs())){
@@ -31,14 +32,6 @@ public class Controller implements ActionListener {
            m.addlistener(this);
            m.setVisible(true);
            l.setVisible(false);
-            }
-        }
-        if(ae.getSource().equals(l.getBLoginAdmin())){
-            if(!l.getTFUsernameAdmin().getText().equals("admin") && (!l.getTFPasswordAdmin().getText().equals("admin1"))){
-                JOptionPane.showMessageDialog(m, "Username dan Password Tidak Ditemukan", "Error!!!", JOptionPane.WARNING_MESSAGE);
-            } else{
-                a.addListener(this);
-                a.setVisible(true);
             }
         }
         if(ae.getSource().equals(m.getBKembali1())){
@@ -89,6 +82,10 @@ public class Controller implements ActionListener {
            a.addListener(this);
            a.setVisible(true);
            l.setVisible(false);
+           a.getjListLokasi().setVisibleRowCount(10);
+           a.getjListLokasi().setModel(o.fillListBox());
+           a.getjListLokasi().setVisible(true);
+           
            JOptionPane.showConfirmDialog(m, "Anda Berhasil Masuk");
             }
         l.resetLA();
@@ -96,11 +93,18 @@ public class Controller implements ActionListener {
         if(ae.getSource().equals(a.getBSimpanLokasi())){
             Lokasi lk = new Lokasi(Integer.parseInt(a.getTFnomorLokasi().getText()),a.getTFtambahnamalokasi().getText());
             model.menu4(lk);
-            a.resetIL();
-            //o.fillListBox(a);
-            
-            
+            a.getjListLokasi().setVisibleRowCount(10);
+            a.getjListLokasi().setModel(o.fillListBox());
+            a.getjListLokasi().setVisible(true);
+            a.resetIL(); 
         }
+        if(ae.getSource().equals(a.getBSimpanKelompok())){
+            Lokasi ll = model.getLokasi(a.getjTFUrutanL().getText());
+            model.menu6(ll,Integer.parseInt(a.getTFIdKelompoktambahklp().getText()));
+            a.resetTK();
+        }
+        
+        
            
     }
     private Lokasi h=null;

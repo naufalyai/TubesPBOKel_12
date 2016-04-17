@@ -7,6 +7,7 @@ package database;
 
 import View.MenuAdmin;
 import View.MenuMahasiswa;
+import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,9 +27,9 @@ import javax.swing.JOptionPane;
 public class Database {
     private String server = "jdbc:mysql://localhost/tubes", dbuser = "root", dbpass = "";
     private Statement st;
+    private PreparedStatement ps;
     private Connection con;
     private MenuMahasiswa n;
-    private MenuAdmin a;
     public void connect() {
         try {
             con = DriverManager.getConnection(server, dbuser, dbpass);
@@ -88,6 +89,19 @@ public class Database {
         }
         return ll;
     }
+  public Lokasi getLokasi2(String nL){
+        Lokasi ll = null;
+        try{
+            String query = "SELECT * FROM lokasi WHERE nlokasi= '"+nL+"'";
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                ll = new Lokasi(rs.getInt(1),rs.getString(2));
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(n, "Error: Mahasiswa Tidak Ada", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        return ll;
+    }
   public void saveKelompok(Lokasi l,int w){
       try {
 
@@ -102,7 +116,7 @@ public class Database {
   public Kelompok getKelompok(int idKelompok){
         Kelompok kk = null;
         try{
-            String query = "SELECT * FROM kelompok WHERE idKelompok= "+idKelompok;
+            String query = "SELECT * FROM 'kelompok' WHERE 'idKelompok'= "+idKelompok;
             ResultSet rs = st.executeQuery(query);
             while(rs.next()){
                 kk = new Kelompok(rs.getInt(1));
@@ -122,20 +136,24 @@ public class Database {
           JOptionPane.showMessageDialog(n, "Anggota tidak bisa ditambahkan", "Error!!!!", JOptionPane.WARNING_MESSAGE);
       }
   }
-  /*public void fillListBox(MenuAdmin a){
+  public DefaultListModel fillListBox(){
+      DefaultListModel m = new DefaultListModel();
+     
       try{
-          String sql = "SELECT * FROM lokasi";
+          String sql = "SELECT nlokasi FROM lokasi";
           ResultSet rs = st.executeQuery(sql);
           while(rs.next()){
               String name = rs.getString("nlokasi");
-              a.setName(name);
+              m.addElement(name);
           }
       } catch(Exception e){
-          JOptionPane.showMessageDialog(n, "Tidak Ada Lokasi", "Error!!!", JOptionPane.WARNING_MESSAGE);
+          //JOptionPane.showMessageDialog(n, "Tidak Ada Lokasi", "Error!!!", JOptionPane.WARNING_MESSAGE);
+          e.printStackTrace();
       }
+      return m;
       
         
-  }*/
+  }
   
   
   

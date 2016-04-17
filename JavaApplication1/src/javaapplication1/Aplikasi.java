@@ -74,6 +74,23 @@ public class Aplikasi {
             }
         }
     }
+
+    public ArrayList<Lokasi> getDaftarLokasi() {
+        return daftarLokasi;
+    }
+    public Lokasi getLokasi(String nama){
+        Lokasi ll = null;
+        for(int i=0;i<daftarLokasi.size();i++){
+            if(daftarLokasi.get(i).getLokasi()== nama){
+                ll=daftarLokasi.get(i);
+            }
+        }
+        if(ll == null){
+            ll=con.getLokasi2(nama);
+            daftarLokasi.add(ll);
+        }
+        return ll;
+    }
     
     
     //daftar geladi
