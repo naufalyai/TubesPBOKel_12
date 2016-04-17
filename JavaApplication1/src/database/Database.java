@@ -44,7 +44,7 @@ public class Database {
 
         try {
 
-            String query = "INSERT INTO mahasiswa VALUES ('"+m.getFirstNama()+"','"+m.getLastNama()+"','"+m.getJenisKelamin()+"','"+m.getTanggalLahir()+"','"+m.getTelepon()+"','"+m.getAlamat()+"',"+m.getIpk()+","+m.getNim()+")";
+            String query = "INSERT INTO mahasiswa(firstnama,lastnama,jenisK,tanggalLahir,telepon,alamat,ipk,nim) VALUES ('"+m.getFirstNama()+"','"+m.getLastNama()+"','"+m.getJenisKelamin()+"','"+m.getTanggalLahir()+"','"+m.getTelepon()+"','"+m.getAlamat()+"',"+m.getIpk()+","+m.getNim()+")";
             st.execute(query);
             JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
         } catch (SQLException ex) {
@@ -65,6 +65,7 @@ public class Database {
         }
         return m;
     }
+  
   public void saveLokasi (Lokasi l) {
 
         try {
@@ -116,7 +117,7 @@ public class Database {
   public Kelompok getKelompok(int idKelompok){
         Kelompok kk = null;
         try{
-            String query = "SELECT * FROM 'kelompok' WHERE 'idKelompok'= "+idKelompok;
+            String query = "SELECT * FROM kelompok WHERE idKelompok= "+idKelompok;
             ResultSet rs = st.executeQuery(query);
             while(rs.next()){
                 kk = new Kelompok(rs.getInt(1));
@@ -126,6 +127,24 @@ public class Database {
         }
         return kk;
     }
+  public DefaultListModel fillListBoxKel(Lokasi l){
+      DefaultListModel s = new DefaultListModel();
+     
+      try{
+          String sql = "SELECT idKelompok FROM kelompok WHERE nomorLokasi = "+l.getNomorLokasi();
+          ResultSet rs = st.executeQuery(sql);
+          while(rs.next()){
+              int id = rs.getInt("idKelompok");
+              s.addElement("Kelompok "+String.valueOf(id)+" ID : "+String.valueOf(id));
+          }
+      } catch(Exception e){
+          JOptionPane.showMessageDialog(n, "Tidak Ada Lokasi", "Error!!!", JOptionPane.WARNING_MESSAGE);
+          //e.printStackTrace();
+      }
+      return s;
+      
+        
+  }
   public void tambahAnggota(int idKelompok,int nim){
       
       try{
@@ -154,7 +173,28 @@ public class Database {
       
         
   }
-  
+  public DefaultListModel fillListBoxSA(int id){
+      DefaultListModel m = new DefaultListModel();
+     
+      try{
+          String sql = "SELECT idKelompok,firstnama,lastnama,nim FROM mahasiswa join kelompok using(idKelompok) WHERE  idKelompok = "+id;
+          ResultSet rs = st.executeQuery(sql);
+          while(rs.next()){
+              String name1 = rs.getString("idKelompok");
+              
+              String name3 = rs.getString("firstnama");
+              String name4 = rs.getString("lastnama");
+              String name5 = rs.getString("nim");
+              m.addElement(name5+": "+name3+" "+name4);
+          }
+      } catch(Exception e){
+          //JOptionPane.showMessageDialog(n, "Tidak Ada Lokasi", "Error!!!", JOptionPane.WARNING_MESSAGE);
+          e.printStackTrace();
+      }
+      return m;
+      
+        
+  }
   
   
 }

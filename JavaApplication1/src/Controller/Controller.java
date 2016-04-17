@@ -32,9 +32,16 @@ public class Controller implements ActionListener {
            m.addlistener(this);
            m.setVisible(true);
            l.setVisible(false);
+           
+           m.getjListPLok().setVisibleRowCount(10);
+           m.getjListPLok().setModel(o.fillListBox());
+           m.getjListPLok().setVisible(true);
+           
+           
+           
             }
         }
-        if(ae.getSource().equals(m.getBKembali1())){
+        /*if(ae.getSource().equals(m.getBKembali1())){
             h = model.menu2(m.getTFULokasi().getText());
             JOptionPane.showMessageDialog(m, "Lokasi Berhasil Dipilih");
         }
@@ -45,14 +52,14 @@ public class Controller implements ActionListener {
             } else{
                 JOptionPane.showMessageDialog(m, "Kelompok Tidak Dapat dipilih", "Warning!!!", JOptionPane.WARNING_MESSAGE);
             }
-        }
+        }*/
         
         
         
         if (ae.getSource().equals(m.getBSimpan())){
             String name = m.getTFNamadpn().getText();
             String name2 = m.getTFNamablk().getText();
-            String name3;
+            String name3 = null;
             if(m.getRBLaki().isSelected()){
                 name3 = "Laki-laki";
             } else{
@@ -101,9 +108,34 @@ public class Controller implements ActionListener {
         if(ae.getSource().equals(a.getBSimpanKelompok())){
             Lokasi ll = model.getLokasi(a.getjTFUrutanL().getText());
             model.menu6(ll,Integer.parseInt(a.getTFIdKelompoktambahklp().getText()));
+            JOptionPane.showMessageDialog(m, "Kelompok Telah Disimpan");
             a.resetTK();
         }
+        if(ae.getSource().equals(m.getBKembali1())){
+            h = model.getLokasi(m.getTFULokasi().getText());
+            JOptionPane.showMessageDialog(m, "Kelompok berhasil dipilih");
+            m.resetLok();
+            m.getjListPKel().setModel(o.fillListBoxKel(h));
+            m.getjListPKel().setVisibleRowCount(10);
+            m.getjListPKel().setVisible(true);
+        }
+        if(ae.getSource().equals(m.getBKembali2())){
+            model.menu3(Integer.parseInt(m.getTFIDK().getText()), o.getMahasiswa(Long.parseLong(m.getTFgetNIMMhs().getText())),h);
+            JOptionPane.showMessageDialog(m, "Anggota Telah ditambahkan kedalam Kelompok");
+            m.resetPK();
+        }
+        if(ae.getSource().equals(m.getBCari())){
+            m.getjListLK().setModel(o.fillListBoxSA(Integer.parseInt(m.getTFInsKelompok().getText())));
+            JOptionPane.showMessageDialog(m, "Berhasil Ditemukan");
+            m.getjListLK().setVisibleRowCount(10);
+            m.getjListLK().setVisible(true);
+        }
         
+        /*if(ae.getSource().equals(m.getBKembali2())){
+            try{
+              
+            }
+        }*/
         
            
     }

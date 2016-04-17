@@ -119,9 +119,10 @@ public class Aplikasi {
            for (int j = 0; j<m3.getKelompok().size();j++){
                if (idK == m3.getKelompok().get(j).getIdKelompok()){
                    m3.getKelompok().get(j).addAnggota(m);
+                   
                }
-           }   
-       
+           }
+           con.tambahAnggota(idK, Integer.parseInt(String.valueOf(m.getNim())));
    }
    //tambah lokasi
    public void menu4(Lokasi l){
