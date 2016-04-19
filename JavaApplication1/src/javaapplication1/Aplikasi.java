@@ -73,7 +73,9 @@ public class Aplikasi {
                  daftarPembimbing.remove(i);
             }
         }
+        con.deletePembimbing(String.valueOf(nip));
     }
+    
 
     public ArrayList<Lokasi> getDaftarLokasi() {
         return daftarLokasi;
@@ -132,6 +134,7 @@ public class Aplikasi {
    //hapus lokasi
    public void menu5(Lokasi l){
        daftarLokasi.remove(l);
+       con.deleteLokasi(l.getLokasi());
    }
    //tambah kelompok
    public void menu6(Lokasi l,int idK){
@@ -146,6 +149,8 @@ public class Aplikasi {
             l.deleteKelompok(l.getKelompok().get(i));
         }
     }
+    con.deleteKelompok(idK);
+    
    }
    //tambah pembimbing
    public void menu8(String firstNama,String lastNama, String jenisKelamin,String tanggalLahir,String telepon,String alamat,long nip) throws ParseException{

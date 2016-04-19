@@ -98,18 +98,27 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         PDaftar.setBackground(new java.awt.Color(102, 102, 102));
 
-        DaftarLabel.setFont(new java.awt.Font("Market Deco", 0, 11)); // NOI18N
+        DaftarLabel.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
         DaftarLabel.setForeground(new java.awt.Color(255, 255, 255));
         DaftarLabel.setText("Daftar Geladi");
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nama Depan");
 
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nama Belakang");
 
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Jenis Kelamin");
 
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tanggal Lahir");
 
+        CBBulan.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         CBBulan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" }));
         CBBulan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,11 +127,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         });
 
         buttonGroup3.add(RBLaki);
+        RBLaki.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         RBLaki.setText("Laki-laki");
 
         buttonGroup3.add(RBPerempuan);
+        RBPerempuan.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         RBPerempuan.setText("Perempuan");
 
+        CBTanggal.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         CBTanggal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         CBTanggal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,22 +142,43 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             }
         });
 
+        CBTahun.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         CBTahun.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001" }));
 
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nomor Telepon");
 
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Alamat");
 
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("IPK");
 
+        TFNamadpn.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         TFNamadpn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TFNamadpnActionPerformed(evt);
             }
         });
 
+        TFNamablk.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        TFTelepon.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        TFAlamat.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        TFipk.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        TFnim.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        BSimpan.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         BSimpan.setText("Simpan");
 
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("NIM");
 
         javax.swing.GroupLayout PDaftarLayout = new javax.swing.GroupLayout(PDaftar);
@@ -153,68 +186,68 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         PDaftarLayout.setHorizontalGroup(
             PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PDaftarLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(58, 58, 58)
                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
-                        .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PDaftarLayout.createSequentialGroup()
-                                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(TFNamadpn, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                    .addComponent(TFNamablk)))
-                            .addGroup(PDaftarLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(CBTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CBBulan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CBTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PDaftarLayout.createSequentialGroup()
-                                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PDaftarLayout.createSequentialGroup()
+                            .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel1))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(TFNamadpn)
+                                .addComponent(TFNamablk, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PDaftarLayout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addGap(18, 18, 18)
+                            .addComponent(CBTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CBBulan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CBTahun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(PDaftarLayout.createSequentialGroup()
+                            .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PDaftarLayout.createSequentialGroup()
+                                    .addGap(3, 3, 3)
+                                    .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel7)
+                                        .addComponent(jLabel9))
+                                    .addGap(51, 51, 51))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(18, 18, 18)))
+                            .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TFAlamat)
                                     .addGroup(PDaftarLayout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel9))
-                                        .addGap(51, 51, 51))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(18, 18, 18)))
-                                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TFAlamat)
-                                        .addGroup(PDaftarLayout.createSequentialGroup()
-                                            .addComponent(TFTelepon, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-                                            .addGap(121, 121, 121)))
-                                    .addGroup(PDaftarLayout.createSequentialGroup()
-                                        .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                                        .addComponent(BSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(54, 54, 54))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(DaftarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(359, 359, 359))
+                                        .addComponent(TFTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(121, 121, 121)))
+                                .addGroup(PDaftarLayout.createSequentialGroup()
+                                    .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(147, 147, 147)))))
                     .addGroup(PDaftarLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(RBLaki)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(RBPerempuan)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(BSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62))
+            .addGroup(PDaftarLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(DaftarLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PDaftarLayout.setVerticalGroup(
             PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PDaftarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(DaftarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(TFNamadpn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -243,32 +276,39 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addComponent(TFAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PDaftarLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel9)
-                        .addContainerGap(24, Short.MAX_VALUE))
-                    .addGroup(PDaftarLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PDaftarLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel9))
+                            .addGroup(PDaftarLayout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BSimpan)
-                                .addGap(19, 19, 19))))))
+                                .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PDaftarLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BSimpan)
+                        .addGap(28, 28, 28))))
         );
 
         TPMahasiswa.addTab("Daftar Geladi", PDaftar);
 
         PPilihLokasi.setBackground(new java.awt.Color(102, 102, 102));
 
+        BKembali1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         BKembali1.setText("Pilih");
 
-        jLabel10.setText("Pilih Lokasi : ");
+        jLabel10.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Pilih Lokasi ");
 
+        TFULokasi.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        jLabel15.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Masukkan Nama Lokasi");
 
         jScrollPane1.setViewportView(jListPLok);
@@ -280,7 +320,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
                 .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihLokasiLayout.createSequentialGroup()
-                        .addContainerGap(70, Short.MAX_VALUE)
+                        .addContainerGap(185, Short.MAX_VALUE)
                         .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPilihLokasiLayout.createSequentialGroup()
                                 .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,15 +329,16 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                 .addComponent(BKembali1)
                                 .addGap(18, 18, 18))))
                     .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                        .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                                    .addGap(70, 70, 70)
-                                    .addComponent(jLabel15))
-                                .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                                    .addGap(29, 29, 29)
-                                    .addComponent(jLabel10))))
+                        .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jLabel15))
+                            .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(jLabel10))
+                            .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(58, 58, 58))
         );
@@ -306,39 +347,48 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BKembali1)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Lokasi", PPilihLokasi);
 
         PPilihKelompok.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel8.setText("Pilih Kelompok: ");
+        jLabel8.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Pilih Kelompok");
 
+        BKembali2.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         BKembali2.setText("Pilih");
 
+        TFIDK.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         TFIDK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TFIDKActionPerformed(evt);
             }
         });
 
+        jLabel14.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Masukkan ID Kelompok");
 
+        TFgetNIMMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         TFgetNIMMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TFgetNIMMhsActionPerformed(evt);
             }
         });
 
+        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Masukkan NIM");
 
         jScrollPane2.setViewportView(jListPKel);
@@ -358,25 +408,24 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                 .addGap(53, 53, 53)
                                 .addComponent(BKembali2))
                             .addComponent(jLabel16)
-                            .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(151, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jLabel8)))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         PPilihKelompokLayout.setVerticalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
                 .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BKembali2)
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel14)
                         .addGap(3, 3, 3)
                         .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -384,19 +433,30 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Kelompok", PPilihKelompok);
 
         PView.setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel11.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Masukan Lokasi      : ");
 
+        jLabel12.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("LIHAT KELOMPOK DAN LOKASI");
 
+        TFInsLokasi.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        jLabel13.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Masukan Kelompok : ");
 
+        TFInsKelompok.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        BCari.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         BCari.setText("Cari");
 
         jScrollPane3.setViewportView(jListLK);
@@ -414,7 +474,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGroup(PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PViewLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                         .addComponent(BCari)
                         .addGap(72, 72, 72))
                     .addGroup(PViewLayout.createSequentialGroup()
@@ -423,10 +483,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PViewLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(TFInsLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TFInsKelompok))
+                            .addComponent(TFInsKelompok)
+                            .addComponent(TFInsLokasi))
                         .addGap(171, 171, 171))))
         );
         PViewLayout.setVerticalGroup(
@@ -449,7 +507,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addGroup(PViewLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Lihat Kelompok dan Lokasi", PView);
@@ -462,7 +520,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TPMahasiswa)
+            .addComponent(TPMahasiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
         );
 
         pack();

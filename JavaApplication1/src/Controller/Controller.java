@@ -39,6 +39,7 @@ public class Controller implements ActionListener {
            
            
            
+           
             }
         }
         /*if(ae.getSource().equals(m.getBKembali1())){
@@ -76,6 +77,7 @@ public class Controller implements ActionListener {
                 model.addMahasiswa(m);
             } catch (ParseException ex) {
                 JOptionPane.showMessageDialog(m, "Tidak Dapat Ditambahkan", "Error!!!", JOptionPane.WARNING_MESSAGE);
+                //ex.printStackTrace();
                 
             }
             JOptionPane.showMessageDialog(m, "Mahasiswa Berhasil Didaftarkan");
@@ -92,7 +94,17 @@ public class Controller implements ActionListener {
            a.getjListLokasi().setVisibleRowCount(10);
            a.getjListLokasi().setModel(o.fillListBox());
            a.getjListLokasi().setVisible(true);
+           a.getjListHK().setVisibleRowCount(6);
+           a.getjListHK().setModel(o.fillListBoxLK2());
+           a.getjListHK().setVisible(true);
            
+           a.getjListHLok().setVisibleRowCount(6);
+           a.getjListHLok().setModel(o.fillListBox());
+           a.getjListHLok().setVisible(true);
+           
+           a.getjListHP().setModel(o.fillListBoxLP());
+           a.getjListHP().setVisibleRowCount(6);
+           a.getjListHP().setVisible(true);
            JOptionPane.showConfirmDialog(m, "Anda Berhasil Masuk");
             }
         l.resetLA();
@@ -103,13 +115,17 @@ public class Controller implements ActionListener {
             a.getjListLokasi().setVisibleRowCount(10);
             a.getjListLokasi().setModel(o.fillListBox());
             a.getjListLokasi().setVisible(true);
+            a.getjListHLok().setVisibleRowCount(6);
+            a.getjListHLok().setModel(o.fillListBox());
+            a.getjListHLok().setVisible(true);
             a.resetIL(); 
         }
         if(ae.getSource().equals(a.getBSimpanKelompok())){
-            Lokasi ll = model.getLokasi(a.getjTFUrutanL().getText());
+            Lokasi ll = model.getLokasi(a.getjTFUnmL().getText());
             model.menu6(ll,Integer.parseInt(a.getTFIdKelompoktambahklp().getText()));
             JOptionPane.showMessageDialog(m, "Kelompok Telah Disimpan");
             a.resetTK();
+            
         }
         if(ae.getSource().equals(m.getBKembali1())){
             h = model.getLokasi(m.getTFULokasi().getText());
@@ -129,6 +145,59 @@ public class Controller implements ActionListener {
             JOptionPane.showMessageDialog(m, "Berhasil Ditemukan");
             m.getjListLK().setVisibleRowCount(10);
             m.getjListLK().setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBHapusKelompok())){
+            model.menu7(model.getLokasi(a.getjTFPLHL().getText()), Integer.parseInt(a.getTFIdKlphapuskelompok().getText()));
+            a.getjListHK().setVisibleRowCount(6);
+            a.getjListHK().setModel(o.fillListBoxLK2());
+            a.getjListHK().setVisible(true);
+            a.getjListLokasi().setVisibleRowCount(10);
+            a.getjListLokasi().setModel(o.fillListBox());
+            a.getjListLokasi().setVisible(true);
+            a.resetHP();
+            
+        }
+        if(ae.getSource().equals(a.getBHapusLokasi())){
+            model.menu5(model.getLokasi(a.getTFnamalokasihapus().getText()));
+            a.getjListHLok().setVisibleRowCount(6);
+            a.getjListHLok().setModel(o.fillListBox());
+            a.getjListHLok().setVisible(true);
+            a.resetHLok();
+        }
+        if(ae.getSource().equals(a.getBSimpan2())){
+            String name = a.getTFNamadpnpembimbing().getText();
+            String name2 = a.getTFNamablkPembimbing().getText();
+            String name3 = null;
+            if(a.getRBLakipembimbing().isSelected()){
+                name3 = "Laki-laki";
+            } else{
+                name3 = "Perempuan";
+            }
+            Date name8 = a.getBirth();
+            String name4 = a.getTFTeleponpembimbing().getText();
+            String name5 = a.getTFAlamatpembimbing().getText();
+            long name7 = Long.parseLong(a.getTFnippembimbing().getText());
+            try{
+                Pembimbing p = new Pembimbing(name,name2,name3,name8,name4,name5,name7);
+                model.addPembimbing(p);
+                o.savePembimbing(p, o.getLokasi2(a.getJTFNL().getText()).getNomorLokasi());
+                
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(a, "Pembimbing tidak dapat ditambahkan", "Error!!!", JOptionPane.WARNING_MESSAGE);
+                //e.printStackTrace();
+            }
+            a.rTambahP();
+            a.getjListHP().setModel(o.fillListBoxLP());
+            a.getjListHP().setVisibleRowCount(6);
+            a.getjListHP().setVisible(true);
+            
+        }
+        if(ae.getSource().equals(a.getBHapusPembimbing())){
+            model.deletePembimbing(Long.parseLong(a.getjTextFieldPP().getText()));
+            a.getjListHP().setModel(o.fillListBoxLP());
+            a.getjListHP().setVisibleRowCount(6);
+            a.getjListHP().setVisible(true);
+            a.resetHP2();
         }
         
         /*if(ae.getSource().equals(m.getBKembali2())){
