@@ -37,15 +37,6 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        PMahasiswa = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        TFUsernameMhs = new javax.swing.JTextField();
-        TFPasswordMhs = new javax.swing.JTextField();
-        BLoginMhs = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         PAdmin = new java.awt.Panel();
         jLabel4 = new javax.swing.JLabel();
         TFUsernameAdmin = new javax.swing.JTextField();
@@ -55,102 +46,17 @@ public class Login extends javax.swing.JFrame {
         BLoginAdmin = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        PMahasiswa = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        TFUsernameMhs = new javax.swing.JTextField();
+        TFPasswordMhs = new javax.swing.JTextField();
+        BLoginMhs = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        PMahasiswa.setBackground(new java.awt.Color(102, 102, 102));
-
-        jLabel9.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("MAHASISWA");
-
-        TFUsernameMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        TFUsernameMhs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFUsernameMhsActionPerformed(evt);
-            }
-        });
-
-        TFPasswordMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-
-        BLoginMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        BLoginMhs.setText("Login");
-        BLoginMhs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BLoginMhsActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Password");
-
-        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Username");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Naufal Dzaky\\Downloads\\l.png")); // NOI18N
-
-        javax.swing.GroupLayout PMahasiswaLayout = new javax.swing.GroupLayout(PMahasiswa);
-        PMahasiswa.setLayout(PMahasiswaLayout);
-        PMahasiswaLayout.setHorizontalGroup(
-            PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
-                .addGap(0, 178, Short.MAX_VALUE)
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
-                        .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PMahasiswaLayout.createSequentialGroup()
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TFUsernameMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(219, 219, 219))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
-                        .addComponent(BLoginMhs)
-                        .addGap(255, 255, 255))))
-            .addGroup(PMahasiswaLayout.createSequentialGroup()
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(jLabel10)
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel1))
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        PMahasiswaLayout.setVerticalGroup(
-            PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PMahasiswaLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel10))
-                .addGap(36, 36, 36)
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TFUsernameMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(BLoginMhs)
-                .addContainerGap(102, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Mahasiswa", PMahasiswa);
 
         PAdmin.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -191,27 +97,28 @@ public class Login extends javax.swing.JFrame {
                         .addGap(196, 196, 196)
                         .addComponent(jLabel4))
                     .addGroup(PAdminLayout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PAdminLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TFUsernameAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PAdminLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TFPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(PAdminLayout.createSequentialGroup()
-                        .addGap(265, 265, 265)
-                        .addComponent(BLoginAdmin))
-                    .addGroup(PAdminLayout.createSequentialGroup()
-                        .addGap(256, 256, 256)
-                        .addComponent(jLabel2))
-                    .addGroup(PAdminLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(239, Short.MAX_VALUE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PAdminLayout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PAdminLayout.createSequentialGroup()
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(TFUsernameAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PAdminLayout.createSequentialGroup()
+                                    .addGap(1, 1, 1)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(TFPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PAdminLayout.createSequentialGroup()
+                                .addGap(107, 107, 107)
+                                .addComponent(BLoginAdmin))))
+                    .addGroup(PAdminLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jLabel2)))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
         PAdminLayout.setVerticalGroup(
             PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,7 +129,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TFUsernameAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -235,16 +142,109 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(BLoginAdmin)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Admin", PAdmin);
+
+        PMahasiswa.setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel9.setFont(new java.awt.Font("Soup of Justice", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("MAHASISWA");
+
+        TFUsernameMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        TFUsernameMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFUsernameMhsActionPerformed(evt);
+            }
+        });
+
+        TFPasswordMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+
+        BLoginMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        BLoginMhs.setText("Login");
+        BLoginMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BLoginMhsActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Password");
+
+        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Username");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Naufal Dzaky\\Downloads\\l.png")); // NOI18N
+
+        javax.swing.GroupLayout PMahasiswaLayout = new javax.swing.GroupLayout(PMahasiswa);
+        PMahasiswa.setLayout(PMahasiswaLayout);
+        PMahasiswaLayout.setHorizontalGroup(
+            PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PMahasiswaLayout.createSequentialGroup()
+                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(jLabel10))
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PMahasiswaLayout.createSequentialGroup()
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(TFUsernameMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
+                                    .addGap(1, 1, 1)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
+                                .addComponent(BLoginMhs)
+                                .addGap(36, 36, 36))))
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jLabel1)))
+                .addContainerGap(248, Short.MAX_VALUE))
+        );
+        PMahasiswaLayout.setVerticalGroup(
+            PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PMahasiswaLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel10)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TFUsernameMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PMahasiswaLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(BLoginMhs)
+                .addContainerGap(108, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Mahasiswa", PMahasiswa);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
