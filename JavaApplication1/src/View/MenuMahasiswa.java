@@ -66,6 +66,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         TFnim = new javax.swing.JTextField();
         BSimpan = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        BKeluarDaftarGeladi = new javax.swing.JButton();
         PPilihLokasi = new javax.swing.JPanel();
         BKembali1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -73,6 +74,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jListPLok = new javax.swing.JList<>();
+        BKeluarPilihLokasi = new javax.swing.JButton();
         PPilihKelompok = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         BKembali2 = new javax.swing.JButton();
@@ -82,6 +84,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jListPKel = new javax.swing.JList<>();
+        BKeluarPilihKelompok = new javax.swing.JButton();
         PView = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -91,6 +94,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         BCari = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jListLK = new javax.swing.JList<>();
+        BKeluarView = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -181,6 +185,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("NIM");
 
+        BKeluarDaftarGeladi.setText("Keluar");
+
         javax.swing.GroupLayout PDaftarLayout = new javax.swing.GroupLayout(PDaftar);
         PDaftar.setLayout(PDaftarLayout);
         PDaftarLayout.setHorizontalGroup(
@@ -219,14 +225,13 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)))
                             .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TFAlamat)
                                     .addGroup(PDaftarLayout.createSequentialGroup()
-                                        .addComponent(TFTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TFipk, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TFTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(121, 121, 121)))
-                                .addGroup(PDaftarLayout.createSequentialGroup()
-                                    .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(147, 147, 147)))))
+                                .addComponent(TFnim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(PDaftarLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
@@ -240,13 +245,17 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             .addGroup(PDaftarLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(DaftarLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BKeluarDaftarGeladi)
+                .addGap(35, 35, 35))
         );
         PDaftarLayout.setVerticalGroup(
             PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PDaftarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DaftarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(DaftarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BKeluarDaftarGeladi))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(PDaftarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -313,6 +322,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jListPLok);
 
+        BKeluarPilihLokasi.setText("Keluar");
+
         javax.swing.GroupLayout PPilihLokasiLayout = new javax.swing.GroupLayout(PPilihLokasi);
         PPilihLokasi.setLayout(PPilihLokasiLayout);
         PPilihLokasiLayout.setHorizontalGroup(
@@ -334,19 +345,24 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                 .addGap(70, 70, 70)
                                 .addComponent(jLabel15))
                             .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(jLabel10))
-                            .addGroup(PPilihLokasiLayout.createSequentialGroup()
                                 .addGap(70, 70, 70)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(58, 58, 58))
+            .addGroup(PPilihLokasiLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BKeluarPilihLokasi)
+                .addGap(29, 29, 29))
         );
         PPilihLokasiLayout.setVerticalGroup(
             PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihLokasiLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addGroup(PPilihLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(BKeluarPilihLokasi))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -355,7 +371,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addComponent(TFULokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BKembali1)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Lokasi", PPilihLokasi);
@@ -393,34 +409,39 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jListPKel);
 
+        BKeluarPilihKelompok.setText("Keluar");
+
         javax.swing.GroupLayout PPilihKelompokLayout = new javax.swing.GroupLayout(PPilihKelompok);
         PPilihKelompok.setLayout(PPilihKelompokLayout);
         PPilihKelompokLayout.setHorizontalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihKelompokLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
                 .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                                .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)
-                                .addComponent(BKembali2))
-                            .addComponent(jLabel16)
-                            .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8)))
+                        .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(BKembali2))
+                    .addComponent(jLabel16)
+                    .addComponent(TFIDK, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(262, Short.MAX_VALUE))
+            .addGroup(PPilihKelompokLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BKeluarPilihKelompok)
+                .addGap(33, 33, 33))
         );
         PPilihKelompokLayout.setVerticalGroup(
             PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PPilihKelompokLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
+                .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(BKeluarPilihKelompok))
+                .addGap(22, 22, 22)
                 .addGroup(PPilihKelompokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BKembali2)
                     .addGroup(PPilihKelompokLayout.createSequentialGroup()
@@ -433,7 +454,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TFgetNIMMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         TPMahasiswa.addTab("Pilih Kelompok", PPilihKelompok);
@@ -461,6 +482,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         jScrollPane3.setViewportView(jListLK);
 
+        BKeluarView.setText("Keluar");
+
         javax.swing.GroupLayout PViewLayout = new javax.swing.GroupLayout(PView);
         PView.setLayout(PViewLayout);
         PViewLayout.setHorizontalGroup(
@@ -468,7 +491,9 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             .addGroup(PViewLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BKeluarView)
+                .addGap(26, 26, 26))
             .addGroup(PViewLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,9 +515,11 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         PViewLayout.setVerticalGroup(
             PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PViewLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel12)
-                .addGap(23, 23, 23)
+                .addGap(28, 28, 28)
+                .addGroup(PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(BKeluarView))
+                .addGap(19, 19, 19)
                 .addGroup(PViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(TFInsLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -520,7 +547,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TPMahasiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+            .addComponent(TPMahasiswa)
         );
 
         pack();
@@ -585,6 +612,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         BCari.addActionListener(a);
         BKembali1.addActionListener(a);
         BKembali2.addActionListener(a);
+        BKeluarDaftarGeladi.addActionListener(a);
+        BKeluarPilihKelompok.addActionListener(a);
+        BKeluarPilihLokasi.addActionListener(a);
+        BKeluarView.addActionListener(a);
     }
 
     public JButton getBSimpan() {
@@ -696,6 +727,24 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     public JTextField getTFgetNIMMhs() {
         return TFgetNIMMhs;
     }
+
+    public JButton getBKeluarDaftarGeladi() {
+        return BKeluarDaftarGeladi;
+    }
+
+    public JButton getBKeluarPilihKelompok() {
+        return BKeluarPilihKelompok;
+    }
+
+    public JButton getBKeluarPilihLokasi() {
+        return BKeluarPilihLokasi;
+    }
+
+    public JButton getBKeluarView() {
+        return BKeluarView;
+    }
+    
+    
     
     public void rDaftarGeladi(){
         TFNamadpn.setText("");
@@ -789,6 +838,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BCari;
+    private javax.swing.JButton BKeluarDaftarGeladi;
+    private javax.swing.JButton BKeluarPilihKelompok;
+    private javax.swing.JButton BKeluarPilihLokasi;
+    private javax.swing.JButton BKeluarView;
     private javax.swing.JButton BKembali1;
     private javax.swing.JButton BKembali2;
     private javax.swing.JButton BSimpan;
