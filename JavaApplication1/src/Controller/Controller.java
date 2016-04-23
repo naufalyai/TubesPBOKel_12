@@ -105,7 +105,7 @@ public class Controller implements ActionListener {
            a.getjListHP().setModel(o.fillListBoxLP());
            a.getjListHP().setVisibleRowCount(6);
            a.getjListHP().setVisible(true);
-           JOptionPane.showConfirmDialog(m, "Anda Berhasil Masuk");
+           JOptionPane.showMessageDialog(a, "Anda Berhasil Masuk");
             }
         l.resetLA();
         }

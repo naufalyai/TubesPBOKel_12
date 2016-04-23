@@ -48,7 +48,7 @@ public class Database {
 
             String query = "INSERT INTO mahasiswa(firstnama,lastnama,jenisK,tanggalLahir,telepon,alamat,ipk,nim) VALUES ('"+m.getFirstNama()+"','"+m.getLastNama()+"','"+m.getJenisKelamin()+"','"+m.getTanggalLahir()+"','"+m.getTelepon()+"','"+m.getAlamat()+"',"+m.getIpk()+","+m.getNim()+")";
             st.execute(query);
-            JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
+            JOptionPane.showMessageDialog(n, "Data Telah di inputkan");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(n, "Mahasiswa tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
         }
@@ -59,7 +59,7 @@ public class Database {
 
             String query = "INSERT INTO pembimbing VALUES ('"+p.getFirstNama()+"','"+p.getLastNama()+"','"+p.getJenisKelamin()+"','"+p.getTanggalLahir()+"','"+p.getTelepon()+"','"+p.getAlamat()+"',"+p.getNip()+","+idL+")";
             st.execute(query);
-            JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
+            JOptionPane.showMessageDialog(n, "Data Telah di inputkan");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(n, "Mahasiswa tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
         }
@@ -85,7 +85,7 @@ public class Database {
 
             String query = "INSERT INTO lokasi(nomorLokasi,nlokasi) VALUES ("+l.getNomorLokasi()+",'"+l.getLokasi()+"')";
             st.execute(query);
-            JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
+            JOptionPane.showMessageDialog(n, "Data Telah di inputkan");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(n, "Lokasi tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
         }
@@ -121,7 +121,7 @@ public class Database {
 
             String query = "INSERT INTO kelompok(idKelompok,nomorLokasi) VALUES ("+w+","+l.getNomorLokasi()+")";
             st.execute(query);
-            JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
+            JOptionPane.showMessageDialog(n, "Data Telah di inputkan");
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(n, "Kelompok tak dapat di inputkan", "Error", JOptionPane.WARNING_MESSAGE);
@@ -163,7 +163,7 @@ public class Database {
       try{
           String query = "UPDATE mahasiswa SET idKelompok = "+idKelompok+" WHERE nim ="+nim;
           st.execute(query);
-          JOptionPane.showConfirmDialog(n, "Data Telah di inputkan");
+          JOptionPane.showMessageDialog(n, "Data Telah di inputkan");
       } catch(Exception e){
           JOptionPane.showMessageDialog(n, "Anggota tidak bisa ditambahkan", "Error!!!!", JOptionPane.WARNING_MESSAGE);
       }

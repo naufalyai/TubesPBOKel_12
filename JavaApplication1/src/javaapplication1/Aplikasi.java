@@ -373,6 +373,8 @@ public class Aplikasi {
                     System.out.println("Press 'y' to back to home");
                     pilih.next();    
                     break;
+                case 11:
+                    
                 case 0: plh = 0; break;
                 default: plh = 1; break;
                     
