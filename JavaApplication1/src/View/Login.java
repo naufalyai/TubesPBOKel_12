@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
@@ -40,29 +41,27 @@ public class Login extends javax.swing.JFrame {
         PAdmin = new java.awt.Panel();
         jLabel4 = new javax.swing.JLabel();
         TFUsernameAdmin = new javax.swing.JTextField();
-        TFPasswordAdmin = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         BLoginAdmin = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jPasswordFieldAdmin = new javax.swing.JPasswordField();
         PMahasiswa = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         TFUsernameMhs = new javax.swing.JTextField();
-        TFPasswordMhs = new javax.swing.JTextField();
         BLoginMhs = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jPasswordFieldMhs = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PAdmin.setBackground(new java.awt.Color(102, 102, 102));
 
         TFUsernameAdmin.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-
-        TFPasswordAdmin.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,7 +104,7 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(PAdminLayout.createSequentialGroup()
                                 .addGap(107, 107, 107)
                                 .addComponent(BLoginAdmin))
-                            .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(PAdminLayout.createSequentialGroup()
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -114,12 +113,11 @@ public class Login extends javax.swing.JFrame {
                                     .addGap(1, 1, 1)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(TFPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jPasswordFieldAdmin)))))
+                    .addGroup(PAdminLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jLabel2)))
                 .addContainerGap(244, Short.MAX_VALUE))
-            .addGroup(PAdminLayout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PAdminLayout.setVerticalGroup(
             PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,14 +132,11 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TFUsernameAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PAdminLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TFPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PAdminLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(3, 3, 3)
+                .addGroup(PAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordFieldAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addComponent(BLoginAdmin)
                 .addContainerGap(112, Short.MAX_VALUE))
         );
@@ -160,8 +155,6 @@ public class Login extends javax.swing.JFrame {
                 TFUsernameMhsActionPerformed(evt);
             }
         });
-
-        TFPasswordMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
 
         BLoginMhs.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         BLoginMhs.setText("Login");
@@ -196,7 +189,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(PMahasiswaLayout.createSequentialGroup()
                         .addGap(149, 149, 149)
                         .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(PMahasiswaLayout.createSequentialGroup()
                                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -205,7 +198,7 @@ public class Login extends javax.swing.JFrame {
                                     .addGap(1, 1, 1)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jPasswordFieldMhs)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMahasiswaLayout.createSequentialGroup()
                                 .addComponent(BLoginMhs)
                                 .addGap(36, 36, 36))))
@@ -227,14 +220,11 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TFUsernameMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TFPasswordMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PMahasiswaLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(3, 3, 3)
+                .addGroup(PMahasiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordFieldMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addComponent(BLoginMhs)
                 .addContainerGap(108, Short.MAX_VALUE))
         );
@@ -326,13 +316,6 @@ public class Login extends javax.swing.JFrame {
         return PMahasiswa;
     }
 
-    public JTextField getTFPasswordAdmin() {
-        return TFPasswordAdmin;
-    }
-
-    public JTextField getTFPasswordMhs() {
-        return TFPasswordMhs;
-    }
 
     public JTextField getTFUsernameAdmin() {
         return TFUsernameAdmin;
@@ -347,12 +330,21 @@ public class Login extends javax.swing.JFrame {
     }
     public void resetLM(){
         TFUsernameMhs.setText("");
-        TFPasswordMhs.setText("");
+        jPasswordFieldMhs.setText("");
     }
     public void resetLA(){
         TFUsernameAdmin.setText("");
-        TFPasswordAdmin.setText("");
+        jPasswordFieldAdmin.setText("");
     }
+
+    public JPasswordField getjPasswordFieldAdmin() {
+        return jPasswordFieldAdmin;
+    }
+
+    public JPasswordField getjPasswordFieldMhs() {
+        return jPasswordFieldMhs;
+    }
+    
     
     
 
@@ -361,8 +353,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton BLoginMhs;
     private java.awt.Panel PAdmin;
     private javax.swing.JPanel PMahasiswa;
-    private javax.swing.JTextField TFPasswordAdmin;
-    private javax.swing.JTextField TFPasswordMhs;
     private javax.swing.JTextField TFUsernameAdmin;
     private javax.swing.JTextField TFUsernameMhs;
     private javax.swing.JLabel jLabel1;
@@ -375,6 +365,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField jPasswordFieldAdmin;
+    private javax.swing.JPasswordField jPasswordFieldMhs;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }

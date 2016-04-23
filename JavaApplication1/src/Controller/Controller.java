@@ -26,7 +26,7 @@ public class Controller implements ActionListener {
         Object source = ae.getSource();
         //frame MenuMhaasiswa tab Daftar Geladi
         if (ae.getSource().equals(l.getBLoginMhs())){
-            if((!l.getTFUsernameMhs().getText().equals("Mhs"))&&(!l.getTFPasswordMhs().getText().equals("coba"))){
+            if((!l.getTFUsernameMhs().getText().equals("Mhs"))&&(!l.getjPasswordFieldMhs().getText().equals("coba"))){
                 JOptionPane.showMessageDialog(m, "Username dan Password Tidak Ditemukan", "Error!!!", JOptionPane.WARNING_MESSAGE);
         } else{
            m.addlistener(this);
@@ -85,7 +85,7 @@ public class Controller implements ActionListener {
             
         }
         if(ae.getSource().equals(l.getBLoginAdmin())){
-            if((!l.getTFUsernameAdmin().getText().equals("Admin"))&&(!l.getTFPasswordAdmin().getText().equals("test"))){
+            if((!l.getTFUsernameAdmin().getText().equals("Admin"))&&(!l.getjPasswordFieldAdmin().getText().equals("test"))){
                 JOptionPane.showMessageDialog(l, "Username dan Password Tidak Ditemukan", "Error!!!", JOptionPane.WARNING_MESSAGE);
         } else{
            a.addListener(this);
@@ -199,6 +199,53 @@ public class Controller implements ActionListener {
             a.getjListHP().setVisible(true);
             a.resetHP2();
         }
+        if(ae.getSource().equals(a.getBKeluarHapusKelompok())){
+            a.setVisible(false);
+            l.setVisible(true);
+            
+        }
+        if(ae.getSource().equals(a.getBKeluarHapusLokasi())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBKeluarHapusPembimbing())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBKeluarHapusPeserta())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBKeluarTambahKelompok())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBKeluarTambahLokasi())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(a.getBKeluarTambahPembimbing())){
+            a.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(m.getBKeluarDaftarGeladi())){
+            m.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(m.getBKeluarPilihKelompok())){
+            m.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(m.getBKeluarPilihLokasi())){
+            m.setVisible(false);
+            l.setVisible(true);
+        }
+        if(ae.getSource().equals(m.getBKeluarView())){
+            m.setVisible(false);
+            l.setVisible(true);
+        }
+        
+       
         
         /*if(ae.getSource().equals(m.getBKembali2())){
             try{

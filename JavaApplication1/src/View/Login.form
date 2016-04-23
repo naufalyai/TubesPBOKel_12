@@ -71,7 +71,7 @@
                                       <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                                       <Component id="BLoginAdmin" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel6" min="-2" pref="62" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -81,18 +81,17 @@
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Component id="jLabel5" min="-2" pref="61" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="TFPasswordAdmin" min="-2" pref="135" max="-2" attributes="0"/>
+                                          <Component id="jPasswordFieldAdmin" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="244" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -110,17 +109,12 @@
                           <Component id="jLabel6" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="TFUsernameAdmin" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="TFPasswordAdmin" min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel5" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jPasswordFieldAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="BLoginAdmin" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="112" max="32767" attributes="0"/>
                   </Group>
@@ -131,13 +125,6 @@
             <Component class="javax.swing.JLabel" name="jLabel4">
             </Component>
             <Component class="javax.swing.JTextField" name="TFUsernameAdmin">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="11" style="0"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="TFPasswordAdmin">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Comic Sans MS" size="11" style="0"/>
@@ -198,6 +185,8 @@
                 </Property>
               </Properties>
             </Component>
+            <Component class="javax.swing.JPasswordField" name="jPasswordFieldAdmin">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PMahasiswa">
@@ -230,7 +219,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel12" min="-2" pref="62" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -240,7 +229,7 @@
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Component id="jLabel11" min="-2" pref="61" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="TFPasswordMhs" min="-2" pref="135" max="-2" attributes="0"/>
+                                          <Component id="jPasswordFieldMhs" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -272,17 +261,12 @@
                           <Component id="jLabel12" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="TFUsernameMhs" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="TFPasswordMhs" min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="jLabel11" min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel11" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jPasswordFieldMhs" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="BLoginMhs" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="108" max="32767" attributes="0"/>
                   </Group>
@@ -312,13 +296,6 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFUsernameMhsActionPerformed"/>
               </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="TFPasswordMhs">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="11" style="0"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="BLoginMhs">
               <Properties>
@@ -359,6 +336,8 @@
                   <Image iconType="2" name="C:\Users\Naufal Dzaky\Downloads\l.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jPasswordFieldMhs">
             </Component>
           </SubComponents>
         </Container>
