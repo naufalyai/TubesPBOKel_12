@@ -109,18 +109,13 @@ public class MenuAdmin extends javax.swing.JFrame {
         BSimpanLokasi = new javax.swing.JButton();
         BKeluarTambahLokasi = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        BHapusPembimbing1 = new javax.swing.JButton();
+        BHapusPeserta = new javax.swing.JButton();
         jTextFieldNimPeserta = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jListHpsPeserta = new javax.swing.JList<>();
         jLabel25 = new javax.swing.JLabel();
         BKeluarHapusPeserta = new javax.swing.JButton();
-        jTFKelompokHP = new javax.swing.JTextField();
-        jTFLokasiHP = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jButtonPilih = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -705,11 +700,11 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
-        BHapusPembimbing1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        BHapusPembimbing1.setText("Hapus");
-        BHapusPembimbing1.addActionListener(new java.awt.event.ActionListener() {
+        BHapusPeserta.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        BHapusPeserta.setText("Hapus");
+        BHapusPeserta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BHapusPembimbing1ActionPerformed(evt);
+                BHapusPesertaActionPerformed(evt);
             }
         });
 
@@ -732,16 +727,6 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         BKeluarHapusPeserta.setText("Keluar");
 
-        jLabel26.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Masukkan ID Kelompok ");
-
-        jLabel27.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("Masukkan Nama Lokasi");
-
-        jButtonPilih.setText("Pilih");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -753,21 +738,12 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addGap(36, 36, 36)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel24)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel27))
-                                .addGap(34, 34, 34)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BHapusPembimbing1)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTFLokasiHP)
-                                            .addComponent(jTFKelompokHP)
-                                            .addComponent(jTextFieldNimPeserta, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonPilih)))))
-                        .addContainerGap(180, Short.MAX_VALUE))
+                                    .addComponent(BHapusPeserta)
+                                    .addComponent(jTextFieldNimPeserta, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(249, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -783,23 +759,12 @@ public class MenuAdmin extends javax.swing.JFrame {
                     .addComponent(BKeluarHapusPeserta))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTFLokasiHP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTFKelompokHP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonPilih))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldNimPeserta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(BHapusPembimbing1))
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldNimPeserta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(BHapusPeserta)
                 .addGap(103, 103, 103))
         );
 
@@ -851,9 +816,9 @@ public class MenuAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNimPesertaActionPerformed
 
-    private void BHapusPembimbing1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BHapusPembimbing1ActionPerformed
+    private void BHapusPesertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BHapusPesertaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BHapusPembimbing1ActionPerformed
+    }//GEN-LAST:event_BHapusPesertaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -904,6 +869,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         BKeluarTambahLokasi.addActionListener(n);
         BKeluarTambahPembimbing.addActionListener(n);
         BKeluarHapusPeserta.addActionListener(n);
+        BHapusPeserta.addActionListener(n);
         
     }
     public JButton getBHapusKelompok() {
@@ -1051,8 +1017,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         return BKeluarTambahPembimbing;
     }
 
-    public JButton getBHapusPembimbing1() {
-        return BHapusPembimbing1;
+    public JButton getBHapusPeserta() {
+        return BHapusPeserta;
     }
 
     public JButton getBKeluarHapusPeserta() {
@@ -1140,7 +1106,14 @@ public class MenuAdmin extends javax.swing.JFrame {
         TFnippembimbing.setText("");
         JTFNL.setText("");
     }
+
     
+
+    
+    public void resetHPes(){
+        
+        jTextFieldNimPeserta.setText("");
+    }
     
     
     
@@ -1154,7 +1127,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JButton BHapusKelompok;
     private javax.swing.JButton BHapusLokasi;
     private javax.swing.JButton BHapusPembimbing;
-    private javax.swing.JButton BHapusPembimbing1;
+    private javax.swing.JButton BHapusPeserta;
     private javax.swing.JButton BKeluarHapusKelompok;
     private javax.swing.JButton BKeluarHapusLokasi;
     private javax.swing.JButton BKeluarHapusPembimbing;
@@ -1188,7 +1161,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField TFnomorLokasi;
     private javax.swing.JTextField TFtambahnamalokasi;
     private javax.swing.JTabbedPane TPAdmin;
-    private javax.swing.JButton jButtonPilih;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1207,8 +1179,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1228,8 +1198,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTFKelompokHP;
-    private javax.swing.JTextField jTFLokasiHP;
     private javax.swing.JTextField jTFPLHL;
     private javax.swing.JTextField jTFUnmL;
     private javax.swing.JTextField jTextFieldNimPeserta;

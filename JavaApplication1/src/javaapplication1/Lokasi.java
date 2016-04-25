@@ -17,6 +17,10 @@ public class Lokasi {
     private String lokasi;
     private int nomorLokasi;
 
+    public Lokasi() {
+    }
+    
+    
     public Lokasi(int nomorLokasi) {
         this.nomorLokasi = nomorLokasi;
         kelompok= new ArrayList();

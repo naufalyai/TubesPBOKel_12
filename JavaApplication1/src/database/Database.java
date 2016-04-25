@@ -279,6 +279,39 @@ public class Database {
       }
       
   }
+  public void deleteAnggota(String p){
+      try{
+          String query = "DELETE FROM mahasiswa WHERE nim = "+p;
+          st.execute(query);
+          JOptionPane.showMessageDialog(n, "Anggota Berhasil dihapus");
+      } catch(Exception e){
+          JOptionPane.showMessageDialog(n, "Gagal menghapus Anggota", "Error!!", JOptionPane.WARNING_MESSAGE);
+      }
+  }
+  public DefaultListModel fillListBoxHP(){
+      DefaultListModel m = new DefaultListModel();
+     
+      try{
+          String sql = "SELECT nim,firstnama,lastnama,idKelompok,nlokasi FROM mahasiswa join kelompok using(idKelompok) join lokasi using(nomorLokasi) ";
+          ResultSet rs = st.executeQuery(sql);
+          while(rs.next()){
+              String name1 = rs.getString("nim");
+              String name2 = rs.getString("nlokasi");
+              String name3 = rs.getString("firstnama");
+              String name4 = rs.getString("lastnama");
+              String name5 = rs.getString("idKelompok");
+              m.addElement("*Nama: "+name3+" "+name4+" NIM: "+name1+" Kelompok: "+name5+" Lokasi: "+name2);
+          }
+      } catch(Exception e){
+          //JOptionPane.showMessageDialog(n, "Tidak Ada Lokasi", "Error!!!", JOptionPane.WARNING_MESSAGE);
+          e.printStackTrace();
+      }
+      return m;
+      
+        
+  }
+  
+  
   
 }
 

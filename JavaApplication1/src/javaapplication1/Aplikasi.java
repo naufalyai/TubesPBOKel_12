@@ -161,6 +161,29 @@ public class Aplikasi {
    public void menu9(long nip){
        deletePembimbing(nip);
    }
+   public void menu11(String namaLokasi,int idKelompok,long nim){
+           Lokasi l = new Lokasi();
+           Kelompok k= new Kelompok();
+           for(int i=0;i<daftarLokasi.size();i++){
+                if(daftarLokasi.get(i).getLokasi() == namaLokasi){
+                    l = daftarLokasi.get(i);
+                }
+           }    
+           for(int j =0;j<l.getKelompok().size();j++){
+               if(l.getKelompok().get(j).getIdKelompok() == idKelompok){
+                  k = l.getKelompok().get(j);
+               }
+           }
+           for(int m=0;m<k.getAnggota().size();m++){
+               if(k.getAnggota().get(m).getNim() == nim){
+                   k.getAnggota().remove(m);
+               }
+           }
+           deleteMahasiswa(nim);
+           con.deleteAnggota(String.valueOf(nim));
+       
+       
+   }
    
    //main menu
    public void mainmenu() throws ParseException{
@@ -180,6 +203,7 @@ public class Aplikasi {
            System.out.println("8. Tambah Pembimbing");
            System.out.println("9. Hapus Pembimbing");
            System.out.println("10. Lihat Lokasi dan Kelompok");
+           System.out.println("11. Hapus Anggota");
            System.out.println("0. Keluar");
            System.out.print("Pilih : ");
            pil = pilih.nextInt();
@@ -374,7 +398,34 @@ public class Aplikasi {
                     pilih.next();    
                     break;
                 case 11:
-                    
+                    try{
+                        for (int i = 0; i<daftarLokasi.size();i++){
+                            System.out.println(i+" Lokasi: "+daftarLokasi.get(i).getLokasi());
+                        }
+                        System.out.print("Pilih Lokasi: ");
+                        int hh = pilih.nextInt();
+                        for (int y = 0; y<daftarLokasi.get(hh).getKelompok().size();y++){
+                            System.out.println("* "+daftarLokasi.get(hh).getKelompok().get(y).getIdKelompok());
+                        }
+                        System.out.print("Pilih Kelompok: ");
+                        int jj = pilih.nextInt();
+                        for (int x = 0; x<daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().size();x++){
+                            System.out.println("* "+daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().get(x).getFirstNama()+" "+daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().get(x).getLastNama());
+                        }
+                        System.out.println("Pilih ID Anggota yang dihapus: ");
+                        long id = pilih.nextLong();
+                        for (int x = 0; x<daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().size();x++){
+                           if((daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().get(x).getNim()) == id){
+                               daftarLokasi.get(hh).getKelompok().get(jj).getAnggota().remove(x);
+                           } 
+                        }
+                        deleteMahasiswa(id);
+                    } catch(Exception e){
+                        System.out.println("Data Tidak Ditemukan");
+                    }
+                    System.out.println("Press 'y' to back to home");
+                    pilih.next();    
+                    break;    
                 case 0: plh = 0; break;
                 default: plh = 1; break;
                     
